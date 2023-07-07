@@ -2,12 +2,12 @@ import TicTacToe from '../lib/tictactoe.js'
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
     conn.game = conn.game ? conn.game : {}
-    if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw `✳️ Todavía estás en el juego para reiniciar la session escribe : *${usedPrefix}delttt*`
-    if (!text) throw `✳️ Ponga un nombre a la sala`
+    if (Object.values(conn.game).find(room => room.id.startsWith('tictactoe') && [room.game.playerX, room.game.playerO].includes(m.sender))) throw `✳️ Вы все еще находитесь в игре, чтобы перезапустить сеанс, введите : *${usedPrefix}delttt*`
+    if (!text) throw `✳️ Дайте залу название`
     let room = Object.values(conn.game).find(room => room.state === 'WAITING' && (text ? room.name === text : true))
     // m.reply('[WIP Feature]')
     if (room) {
-        m.reply('✅ Compañero encontrado')
+        m.reply('✅ Найденный партнер')
         room.o = m.chat
         room.game.playerO = m.sender
         room.state = 'PLAYING'
@@ -27,17 +27,17 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
             }[v]
         })
         let str = `
-Esperando a @${room.game.currentTurn.split('@')[0]} como primer jugador
+Ожидание чтобы @${room.game.currentTurn.split('@')[0]} как первый игрок
         
 ${arr.slice(0, 3).join('')}
 ${arr.slice(3, 6).join('')}
 ${arr.slice(6).join('')}
 
-▢ *SALA ID* ${room.id}
+▢ *Айди зала* ${room.id}
 
-▢ *Reglas*
-‣ Haz 3 filas de símbolos verticales, horizontales o diagonales para ganar
-‣ Escribe *surrender* para salir del juego y ser declarado derrotado.
+▢ *Правило*
+‣Составьте 3 ряда вертикальных, горизонтальных или диагональных символов, чтобы выиграть
+‣ Введите *surrender*, чтобы выйти из игры и быть объявленным побежденным.
 `.trim()
         if (room.x !== room.o) await conn.reply(room.x, str, m, {
             mentions: conn.parseMention(str)
@@ -55,10 +55,10 @@ ${arr.slice(6).join('')}
         }
         if (text) room.name = text
         
-     conn.reply(m.chat, `⏳ *Esperando pareja*\nEscriba el siguiente comando para aceptar
+     conn.reply(m.chat, `⏳ *Ожидание пары*\nВведите следующую команду, чтобы принять
 ▢ *${usedPrefix + command} ${text}*
 
-🎁 Recompensa: *4999 XP*`, m, {
+🎁Награда: *4999 XP*`, m, {
             mentions: conn.parseMention(text)
         })
         
