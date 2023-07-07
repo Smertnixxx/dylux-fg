@@ -341,11 +341,11 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
-                    this.reply(m.chat, `✳️ Ваши бриллианты закончились\писпользуйте следующую команду, чтобы купить больше бриллиантов \n*${usedPrefix}buy* <cantidad> \n*${usedPrefix}buyall*`, m)
+                    this.reply(m.chat, `✳️ Tus diamantes se agotaron\nuse el siguiente comando para comprar más diamantes \n*${usedPrefix}buy* <cantidad> \n*${usedPrefix}buyall*`, m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
-                    this.reply(m.chat, `✳️ требуемый уровень ${plugin.level} чтобы использовать эту команду. \nTu nivel ${_user.level}`, m)
+                    this.reply(m.chat, `✳️ nivel requerido ${plugin.level} para usar este comando. \nTu nivel ${_user.level}`, m)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -475,14 +475,14 @@ export async function participantsUpdate({ id, participants, action }) {
             if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-                    let pp = 'https://ibb.co/HTGsj4X'
-                    let ppgp = 'https://ibb.co/HTGsj4X'
+                    let pp = 'https://i.imgur.com/whjlJSf.jpg'
+                    let ppgp = 'https://i.imgur.com/whjlJSf.jpg'
                     try {
                         pp = await this.profilePictureUrl(user, 'image')
                         ppgp = await this.profilePictureUrl(id, 'image')
                         } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Добро пожаловать, @user').replace('@group', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'Неизвестный') :
-                            (chat.sBye || this.bye || conn.bye || 'Пока, @user')).replace('@user', '@' + user.split('@')[0])
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Bienvenido, @user').replace('@group', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'Desconocido') :
+                            (chat.sBye || this.bye || conn.bye || 'Adiós, @user')).replace('@user', '@' + user.split('@')[0])
                          
                             let wel = API('fgmods', '/api/welcome', {
                                 username: await this.getName(user),
@@ -511,11 +511,11 @@ export async function participantsUpdate({ id, participants, action }) {
             }
             break
         case 'promote':
-            text = (chat.sPromote || this.spromote || conn.spromote || '@пользователь теперь является администратором')
+            text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
         case 'demote':
-            let pp = await this.profilePictureUrl(participants[0], 'image').catch(_ => 'https://ibb.co/HTGsj4X') 
+            let pp = await this.profilePictureUrl(participants[0], 'image').catch(_ => 'https://i.imgur.com/whjlJSf.jpg') 
             if (!text)
-                text = (chat.sDemote || this.sdemote || conn.sdemote || '@пользователь больше не является администратором')
+                text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ya no es administrador')
             text = text.replace('@user', '@' + participants[0].split('@')[0])
             if (chat.detect)    
             this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: this.parseMention(text) })
@@ -557,11 +557,11 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return
         await this.reply(msg.chat, `
-≡ Удалил сообщение 
+≡ Borró un mensaje  
 ┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
-▢ *Имя :* @${participant.split`@`[0]} 
+▢ *Nombre :* @${participant.split`@`[0]} 
 └─────────────
-Чтобы отключить эту функцию, введите 
+Para desactivar esta función, escriba 
 */off antidelete*
 *.enable delete*
 `.trim(), msg, {
@@ -575,16 +575,16 @@ export async function deleteUpdate(message) {
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '👑 Эта команда может использоваться только *Создателем бота*',
-        owner: '🔱 Эта команда может использоваться только *Владельцем бота*',
-        mods: '🔰  Эта функция предназначена только для *Для модераторов бота*',
-        premium: '💠 Эта команда предназначена только для участников *Premium*\n\nEscribe */premium* для получения дополнительной информации',
-        group: '⚙️ Эту команду можно использовать только в группах!',
-        private: '📮 Эту команду можно использовать только в приватном чате *бота*',
-        admin: '🛡️ Эта команда предназначена только для * Администраторов * группы',
-        botAdmin: '💥 Чтобы использовать эту команду, я должен быть *Администратором!*',
-        unreg: '📇 Зарегистрируйтесь, чтобы использовать эту функцию  Escribiendo:\n\n*/reg Имя.Сколько вам лет*\n\n📌Пример : */reg baton. 20*',
-        restrict: '🔐 Эта функция *отключена*'
+        rowner: '👑 Este comando solo puede ser utilizado por el *Creador del bot*',
+        owner: '🔱 Este comando solo puede ser utilizado por el *Dueño del Bot*',
+        mods: '🔰  Esta función es solo para *Para moderadores del Bot*',
+        premium: '💠 Este comando es solo para miembros *Premium*\n\nEscribe */premium* para más info',
+        group: '⚙️ ¡Este comando solo se puede usar en grupos!',
+        private: '📮 Este comando solo se puede usar en el chat *privado del Bot*',
+        admin: '🛡️ Este comando es solo para *Admins* del grupo',
+        botAdmin: '💥 ¡Para usar este comando debo ser *Administrador!*',
+        unreg: '📇 Regístrese para usar esta función  Escribiendo:\n\n*/reg nombre.edad*\n\n📌Ejemplo : */reg dylux.16*',
+        restrict: '🔐 Esta característica está *deshabilitada*'
     }[type]
     if (msg) return m.reply(msg)
 }
@@ -592,6 +592,6 @@ global.dfail = (type, m, conn) => {
 let file = global.__filename(import.meta.url, true)
 watchFile(file, async () => {
     unwatchFile(file)
-    console.log(chalk.magenta("✅ Я обновляюсь 'handler.js'"))
+    console.log(chalk.magenta("✅  Se actualizo 'handler.js'"))
     if (global.reloadHandler) console.log(await global.reloadHandler())
 }) 
