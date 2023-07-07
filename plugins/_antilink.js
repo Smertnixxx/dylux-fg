@@ -14,10 +14,10 @@ export async function before(m, {conn, isAdmin, isBotAdmin }) {
             const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
             if (m.text.includes(linkThisGroup)) return !0
         }
-        await conn.reply(m.chat, `*≡ Enlace Detectado*
+        await conn.reply(m.chat, `*≡ Обнаружена Ссылка*
             
-No permitimos enlaces de otros grupos 
-lo siento *@${m.sender.split('@')[0]}*  serás expulsado del grupo ${isBotAdmin ? '' : '\n\nNo soy admin así que no te puedo expulsar :"v'}`, null, { mentions: [m.sender] } )
+Мы не разрешаем ссылки из других групп
+Я сожалею *@${m.sender.split('@')[0]}*  вы будете исключены из группы ${isBotAdmin ? '' : '\n\nЯ не являюсь администратором, поэтому я не могу вас выгнать :"v'}`, null, { mentions: [m.sender] } )
         if (isBotAdmin && chat.antiLink) {
         	await conn.sendMessage(m.chat, { delete: m.key })
             await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
