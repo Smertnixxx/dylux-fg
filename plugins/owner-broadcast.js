@@ -5,9 +5,9 @@ let handler = async (m, { conn, text }) => {
   let chats = Object.entries(conn.chats).filter(([_, chat]) => chat.isChats).map(v => v[0])
   let cc = conn.serializeM(text ? m : m.quoted ? await m.getQuotedObj() : false || m)
   let teks = text ? text : cc.text
-  conn.reply(m.chat, `✅ Transmision realizada *Total:* ${chats.length} chats`, m)
-  for (let id of chats) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast|tx/i.test(teks) ? teks : `*TRANSMISIÓN ┃ STAFF*\n_____________________\n ${teks} ` ), true).catch(_ => _)
-  m.reply('✅ Se transmitió a todos los chats :)')
+  conn.reply(m.chat, `✅ Осуществленная передача *TOtal:* ${chats.length} chats`, m)
+  for (let id of chats) await conn.copyNForward(id, conn.cMod(m.chat, cc, /bc|broadcast|tx/i.test(teks) ? teks : `*ПЕРЕДАЧА ┃ Персонал*\n_____________________\n ${teks} ` ), true).catch(_ => _)
+  m.reply('✅Он транслировался во все чаты :)')
 }
 handler.help = ['tx']
 handler.tags = ['owner']
