@@ -2,19 +2,19 @@
 import { canLevelUp, xpRange } from '../lib/levelling.js'
 let handler = async (m, { conn }) => {
 	  let name = conn.getName(m.sender)
-    let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://i.imgur.com/whjlJSf.jpg')
+    let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://imgur.com/a/9iHDfwd')
     let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
         let txt = `
-┌───⊷ *NIVEL*
-▢ Nombre : *${name}*
-▢ Nivel : *${user.level}*
+┌───⊷ *Уровень*
+▢ Имя : *${name}*
+▢ Уровень : *${user.level}*
 ▢ XP : *${user.exp - min}/${xp}*
-▢ Rango : *${user.role}*
+▢ Ранг : *${user.role}*
 └──────────────
 
-Te falta *${max - user.exp}* de *XP* para subir de nivel
+Тебе не хватает *${max - user.exp}* от *XP* до повышения уровня
 `.trim()
 try {
   let imgg = API('fgmods', '/api/maker/rank', {
@@ -38,13 +38,13 @@ try {
     	user.role = global.rpg.role(user.level).name
 
         let str = `
-┌─⊷ *LEVEL UP*
-▢ Nivel anterior : *${before}*
-▢ Nivel actual : *${user.level}*
-▢ Rango : *${user.role}*
+┌─⊷ *Уровень повышен*
+▢ Предыдущий уровень : *${before}*
+▢ Текущий уровень : *${user.level}*
+▢ Ранг : *${user.role}*
 └──────────────
 
-*_Cuanto más interactúes con los bots, mayor será tu nivel_*
+*_Чем больше вы будете взаимодействовать с ботом, тем выше будет ваш уровень_*
 `.trim()
         try {
             let img = API('fgmods', '/api/maker/levelup', { 
