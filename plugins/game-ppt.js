@@ -2,45 +2,45 @@
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     let poin = 300
-    let reseqv = `✳️ Seleccione piedra/papel/tijera\n\nEjemplo : *${usedPrefix + command}* papel\n`
+    let reseqv = `✳️ Выберете камень/Бумага/Ножницы\n\nEjemplo : *${usedPrefix + command}* Бумага\n`
     if (!text) throw reseqv
     var astro = Math.random()
 
     if (astro < 0.34) {
-        astro = 'piedra'
+        astro = 'Камень'
     } else if (astro > 0.34 && astro < 0.67) {
-        astro = 'tijera'
+        astro = 'Ножницы'
     } else {
-        astro = 'papel'
+        astro = 'Бумага'
     }
 
 
     if (text == astro) {
       global.db.data.users[m.sender].exp += 100
-        m.reply(`▢ *Empate*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Puntos (±)100 XP`)
-    } else if (text == 'piedra') {
-        if (astro == 'tijera') {
+        m.reply(`▢ *Сопереживать*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Точки (±)100 XP`)
+    } else if (text == 'Камень') {
+        if (astro == 'Ножницы') {
             global.db.data.users[m.sender].exp += 300
-            m.reply(`▢ *Ganaste* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+            m.reply(`▢ *Выйграл* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Точки *+${poin} XP*`)
         } else {
           global.db.data.users[m.sender].exp -= 300
-            m.reply(`▢ *Perdiste*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n Puntos *-${poin} XP*`)
+            m.reply(`▢ *Потерял*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n Точки *-${poin} XP*`)
         }
-    } else if (text == 'tijera') {
-        if (astro == 'papel') {
+    } else if (text == 'Ножницы') {
+        if (astro == 'Бумага') {
             global.db.data.users[m.sender].exp += 300
-            m.reply(`▢ *Ganaste* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+            m.reply(`▢ *Выйграл* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Точки *+${poin} XP*`)
         } else {
           global.db.data.users[m.sender].exp -= 300
-            m.reply(`▢ *Perdiste*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\nPuntos *-${poin} XP*`)
+            m.reply(`▢ *Потерял*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\nPuntos *-${poin} XP*`)
         }
-    } else if (text == 'papel') {
-        if (astro == 'piedra') {
+    } else if (text == 'Бумага') {
+        if (astro == 'Камень') {
             global.db.data.users[m.sender].exp += 300
-            m.reply(`▢ *Ganaste* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Puntos *+${poin} XP*`)
+            m.reply(`▢ *Выйграл* 🎊\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\n🎁 Точки *+${poin} XP*`)
         } else {
           global.db.data.users[m.sender].exp -= 300
-            m.reply(`▢ *Perdiste*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\nPuntos *-${poin} XP*`)
+            m.reply(`▢ *Потерял*\n\n‣ Tú : ${text}\n‣ DyLux : ${astro}\n\nТочки *-${poin} XP*`)
         }
     } else {
         throw reseqv
