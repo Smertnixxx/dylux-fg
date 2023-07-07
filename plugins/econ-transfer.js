@@ -2,10 +2,10 @@ const items = ['diamond', 'exp']
 let confirmation = {}
 
 async function handler(m, { conn, args, usedPrefix, command }) {
-    if (confirmation[m.sender]) return m.reply('estas haciendo una transferencia')
+    if (confirmation[m.sender]) return m.reply('ты делаешь перевод')
     let user = global.db.data.users[m.sender]
     const item = items.filter(v => v in user && typeof user[v] == 'number')
-    let lol = `✳️ Uso correcto del comamdo 
+    let lol = `✳️ Правильное использование команды
 *${usedPrefix + command}*  [tipo] [cantidad] [@user]
 
 📌 Пример : 
