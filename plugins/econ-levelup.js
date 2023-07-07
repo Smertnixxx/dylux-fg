@@ -2,7 +2,7 @@
 import { canLevelUp, xpRange } from '../lib/levelling.js'
 let handler = async (m, { conn }) => {
 	  let name = conn.getName(m.sender)
-    let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://imgur.com/a/9iHDfwd')
+    let pp = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://ibb.co/RTWpnL7')
     let user = global.db.data.users[m.sender]
     if (!canLevelUp(user.level, user.exp, global.multiplier)) {
         let { min, xp, max } = xpRange(user.level, global.multiplier)
