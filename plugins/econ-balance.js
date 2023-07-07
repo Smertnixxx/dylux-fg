@@ -8,12 +8,12 @@ let handler = async (m, {conn, usedPrefix}) => {
 ┌───⊷ *Баланс* ⊶
 ▢ *📌Имя* : _@${who.split('@')[0]}_
 ▢ *💎Алмазы* : _${user.diamond}_
-▢ *⬆️XP* : _Total ${user.exp}_
+▢ *⬆️XP* : ${user.exp}_
 └──────────────
 
 *ПРИМЕЧАНИЕ :* 
 Вы можете купить 💎 алмазы, используя команды
-❏ *${usedPrefix}buy <cantidad>*
+❏ *${usedPrefix}buy <количество>*
 ❏ *${usedPrefix}buyall*`, m, { mentions: [who] })
 }
 handler.help = ['balance']
