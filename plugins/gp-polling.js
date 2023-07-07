@@ -10,7 +10,7 @@ let b = text.split('|')
 for (let c = 1 || 0; c < b.length; c++) {
 a.push([b[c]])
 			}
-			return conn.sendPoll(m.chat, `📊 *Encuesta solicitado por:* ${name}\n\n*Mensaje:* ${text.split('|')[0]}`, a, m)
+			return conn.sendPoll(m.chat, `📊 *Опрос, запрошенный:* ${name}\n\n*Mensaje:* ${text.split('|')[0]}`, a, m)
 }
 handler.help = ['poll <hola|como|xd>']
 handler.tags = ['group'] 
