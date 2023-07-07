@@ -5,7 +5,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   let user = global.db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
   if (user.registered === true) throw `✳️ Вы уже зарегистрированы?\n\nХотите перерегистрироваться?\n\n 📌Используйте эту команду, чтобы удалить свою запись \n*${usedPrefix}unreg* <Номер телефона>`
-  if (!Reg.test(text)) throw `⚠️ Formato incorrecto\n\n ✳️ Использование команды: *${usedPrefix + command} имя. возраст*\n📌Примеры : *${usedPrefix + command}* ${name2}.16`
+  if (!Reg.test(text)) throw `⚠️ Неправильный формат\n\n ✳️ Использование команды: *${usedPrefix + command} имя. возраст*\n📌Примеры : *${usedPrefix + command}* ${name2}.16`
   let [_, name, splitter, age] = text.match(Reg)
   if (!name) throw '✳️ Имя не может быть пустым'
   if (!age) throw '✳️ Возраст не может быть пустым'
