@@ -4,18 +4,18 @@ let handler = async (m, { conn, text }) => {
     let who
     if (m.isGroup) who = m.mentionedJid[0]
     else who = m.chat
-    if (!who) throw '✳️ Taguea al usuario'
+    if (!who) throw '✳️ Помечает пользователя'
     let txt = text.replace('@' + who.split`@`[0], '').trim()
-    if (!txt) throw '✳️ Ingrese la cantidad de *Diamantes* que quiere añadir'
-    if (isNaN(txt)) throw '🔢 sólo números'
+    if (!txt) throw '✳️ Введите количество *Алмазов*, которые вы хотите добавить'
+    if (isNaN(txt)) throw '🔢 только цифры'
     let dmt = parseInt(txt)
     let diamond = dmt
     
-    if (diamond < 1) throw '✳️ Mínimo es  *1*'
+    if (diamond < 1) throw '✳️ Минимум равен *1*'
     let users = global.db.data.users
    users[who].diamond += dmt
 
-    await m.reply(`≡ *💎 AÑADIDO*
+    await m.reply(`≡ *💎 ВСТАВКА*
 ┌──────────────
 ▢ *Total:* ${dmt}
 └──────────────`)
