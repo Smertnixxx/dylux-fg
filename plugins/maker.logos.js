@@ -1,8 +1,8 @@
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 	
-    let tee = `✳️ Ingrese un texto corto\n\n📌 Ejemplo  : *${usedPrefix + command}* FG98`
-    let too = `✳️ Separe EL texto con un *+* \n\n📌 Ejemplo : \n*${usedPrefix + command}* fgmods *+* DyLux`
+    let tee = `✳️ Введите короткий текст\n\n📌 Пример  : *${usedPrefix + command}* батон`
+    let too = `✳️ Разделите текст с помощью *+* \n\n📌 Пример : \n*${usedPrefix + command}* Батон *+* Smertnix `
      m.react(rwait)
  let type = (command).toLowerCase()
  switch (type) {
@@ -10,13 +10,13 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
      case 'logololi':
      if (!text) throw tee 
      let img = global.API('fgmods', '/api/maker/loli', { text }, 'apikey')
-     conn.sendFile(m.chat, img, 'logo.png', `✅ Resultado`, m)
+     conn.sendFile(m.chat, img, 'logo.png', `✅ Результат`, m)
      m.react(done)
      break 
      case 'neon': 
      if (!text) throw tee
      let ne = global.API('fgmods', '/api/textpro/neon', { text }, 'apikey')
-     conn.sendFile(m.chat, ne, 'logo.png', `✅ Resultado`, m)
+     conn.sendFile(m.chat, ne, 'logo.png', `✅Результат`, m)
      m.react(done)
      break 
      case 'devil': 
@@ -28,7 +28,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
      case 'wolf': 
     if (!text) throw tee
     let wo = global.API('fgmods', '/api/textpro/logowolf', { text: 'FG98', text2: text}, 'apikey')
-     conn.sendFile(m.chat, wo, 'logo.png', `✅ Resultado`, m)
+     conn.sendFile(m.chat, wo, 'logo.png', `✅ Результат`, m)
      m.react(done)
      break 
      case 'phlogo': 
@@ -36,7 +36,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
      if (!text.includes('+')) throw too  
      let [a, b] = text.split`+`   
      let ph = global.API('fgmods', '/api/textpro/pornhub', { text: a, text2: b}, 'apikey')
-     conn.sendFile(m.chat, ph, 'logo.png', `✅ Resultado`, m)
+     conn.sendFile(m.chat, ph, 'logo.png', `✅ Результат`, m)
      m.react(done)
      break 
      default:
