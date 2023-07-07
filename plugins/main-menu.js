@@ -102,7 +102,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     let before = conn.menu.before || defaultMenu.before
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
-    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : /${conn.user.jid.split`@`[0]}`) + defaultMenu.after
     let _text = [
       before,
       ...Object.keys(tags).map(tag => {
