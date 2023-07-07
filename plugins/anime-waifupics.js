@@ -10,7 +10,7 @@ switch (type) {
  case 'loli':
   case 'neko':
 	     let loli = await conn.getFile(global.API('fgmods', `/api/img/${command}`, { }, 'apikey'))
-	     conn.sendFile(m.chat, loli.data, 'img.jpg', `✅ Random ${command}`, m)
+	     conn.sendFile(m.chat, loli.data, 'img.jpg', `✅ Рандом ${command}`, m)
 	     m.react(dmoji) 
 	break
 	
@@ -19,8 +19,8 @@ case 'megumin':
   let res = await fetch(`https://api.waifu.pics/sfw/${command}`)
     if (!res.ok) throw await res.text()
     let json = await res.json()
-    if (!json.url) throw '❎ Error'
-    conn.sendFile(m.chat, json.url, 'img.jpg', `✅ Random ${command}`, m)
+    if (!json.url) throw '❎ Ошибка'
+    conn.sendFile(m.chat, json.url, 'img.jpg', `✅ Рандом ${command}`, m)
    m.react(dmoji) 
 break
 
