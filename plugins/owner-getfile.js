@@ -10,19 +10,19 @@ let handler = async (m, { conn, isROwner, usedPrefix, command, text }) => {
   
   if (!text) {
     throw `
-✳️ Uso del comando : ${usedPrefix + command} <name file>
+✳️ Использование команды : ${usedPrefix + command} <name file>
       
-📌 Ejemplo:
+📌 Пример:
 ${usedPrefix + command} main-menu
 `.trim();
   }
 
   if (!pluginNames.includes(text)) {
     return m.reply(`
-📌 *Ejemplo:* 
+📌 *Пример:* 
  ${usedPrefix + command} main-menu 
       
-      ≡ *Lista de Plugins*
+      ≡ *Список плагинов*
 ┌─⊷
  ${pluginNames.map(name => `▢ ${name}`).join('\n')}
 └───────────
@@ -43,7 +43,7 @@ ${usedPrefix + command} main-menu
       await conn.sendMessage(m.chat, { document: fs.readFileSync(pluginFilePath), mimetype: 'application/javascript', fileName: `${text}.js` }, { quoted: arc });
     }
   } catch (e) {
-    m.reply('❎ Error')
+    m.reply('❎ Ошибка')
   }
 };
 handler.help = ['getplugin']
