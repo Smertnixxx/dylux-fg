@@ -29,7 +29,7 @@ global.dygp = 'https://chat.whatsapp.com/IO9jmpI72ejHiN4unRZleU'
 global.fgsc = 'https://github.com/FG98F/dylux-fg' 
 global.fgyt = 'https://youtube.com/fg98f'
 global.fgpyp = 'https://paypal.me/fg98f'
-global.fglog = 'https://i.imgur.com/Owmb93c.png' 
+global.fglog = 'https://ibb.co/HTGsj4X' 
 
 global.wait = '*⌛ _Загрузка..._*\n*▰▰▰▱▱▱▱▱*'
 global.rwait = '⌛'
