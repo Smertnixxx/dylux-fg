@@ -28,7 +28,7 @@ let handler = async (m, { conn, text, args, groupMetadata, usedPrefix, command }
             m.reply(`⛔ Пользователь превысил *${war}* предупреждения, следовательно, будут удалены`)
             await time(3000)
             await conn.groupParticipantsUpdate(m.chat, [who], 'remove')
-            m.reply(`♻️ Вы были исключены из группы *${groupMetadata.subject}* потому что он был предупрежден *${war}* veces`, who)
+            m.reply(`♻️ Вы были исключены из группы *${groupMetadata.subject}* потому что он был предупрежден *${war}* разы`, who)
         }
 }
 handler.help = ['warn @user']
