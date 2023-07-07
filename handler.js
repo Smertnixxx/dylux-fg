@@ -513,7 +513,7 @@ export async function participantsUpdate({ id, participants, action }) {
         case 'promote':
             text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
         case 'demote':
-            let pp = await this.profilePictureUrl(participants[0], 'image').catch(_ => 'https://i.imgur.com/whjlJSf.jpg') 
+            let pp = await this.profilePictureUrl(participants[0], 'image').catch(_ => 'https://ibb.co/HTGsj4X') 
             if (!text)
                 text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ya no es administrador')
             text = text.replace('@user', '@' + participants[0].split('@')[0])
@@ -583,7 +583,7 @@ global.dfail = (type, m, conn) => {
         private: '📮 Эту команду можно использовать только в приватном чате * бота*',
         admin: '🛡️ Эта команда предназначена только для * Администраторов * группы',
         botAdmin: '💥 Чтобы использовать эту команду, я должен быть *Администратором!*',
-        unreg: '📇 Зарегистрируйтесь, чтобы использовать эту функцию  Escribiendo:\n\n*/reg nombre.edad*\n\n📌Пример : */reg baton*',
+        unreg: '📇 Зарегистрируйтесь, чтобы использовать эту функцию  Escribiendo:\n\n*/reg Имя.Сколько вам лет*\n\n📌Пример : */reg baton. 20*',
         restrict: '🔐 Эта функция *отключена*'
     }[type]
     if (msg) return m.reply(msg)
