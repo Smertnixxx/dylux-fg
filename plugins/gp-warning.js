@@ -4,14 +4,14 @@ let handler = async (m, { conn, text, args, groupMetadata, usedPrefix, command }
         let who
         if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
         else who = m.chat
-        if (!who) throw `✳️ Пометьте или упомяните кого-нибудь\n\n📌 Ejemplo : ${usedPrefix + command} @user`
+        if (!who) throw `✳️ Пометьте или упомяните кого-нибудь\n\n📌 Пример : ${usedPrefix + command} @user`
         if (!(who in global.db.data.users)) throw `✳️ Пользователя нет в моей базе данных`
         let name = conn.getName(m.sender)
         let warn = global.db.data.users[who].warn
         if (warn < war) {
             global.db.data.users[who].warn += 1
             m.reply(`
-⚠️ *Пользователь Предупрежден* ⚠️
+⚠️ *Выдано Предупреждение* ⚠️
 
 ▢ *Админ:* ${name}
 ▢ *Пользователь:* @${who.split`@`[0]}
