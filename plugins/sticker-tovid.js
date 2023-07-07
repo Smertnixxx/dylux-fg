@@ -2,7 +2,7 @@ import { webp2mp4 } from '../lib/webp2mp4.js'
 import { ffmpeg } from '../lib/converter.js'
 
 let handler = async (m, { conn }) => {
-    if (!m.quoted) throw '✳️ Ответить на анимированную наклейку'
+    if (!m.quoted) throw '✳️ Ответьте на анимированный стикер'
     let mime = m.quoted.mimetype || ''
     if (!/webp|audio/.test(mime)) throw '✳️ Ответьте на анимированный стикер'
     let media = await m.quoted.download()
@@ -18,7 +18,7 @@ let handler = async (m, { conn }) => {
             '-shortest'
         ], 'mp3', 'mp4')
     }
-    await conn.sendFile(m.chat, out, 'tovid.mp4', '✅ стикер и видео' , m)
+    await conn.sendFile(m.chat, out, 'tovid.mp4', '✅ Готово :)' , m)
 }
 handler.help = ['tovid']
 handler.tags = ['sticker']
