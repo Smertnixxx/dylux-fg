@@ -4,29 +4,29 @@ let Reg = /\|?(.*)([.|] *?)([0-9]*)$/i
 let handler = async function (m, { conn, text, usedPrefix, command }) {
   let user = global.db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
-  if (user.registered === true) throw `✳️ Ya estás registrado\n\n¿Quiere volver a registrarse?\n\n 📌 Use este comando para eliminar su registro \n*${usedPrefix}unreg* <Número de serie>`
-  if (!Reg.test(text)) throw `⚠️ Formato incorrecto\n\n ✳️ Uso del comamdo: *${usedPrefix + command} nombre.edad*\n📌Ejemplo : *${usedPrefix + command}* ${name2}.16`
+  if (user.registered === true) throw `✳️ Вы уже зарегистрированы?\n\nХотите перерегистрироваться?\n\n 📌Используйте эту команду, чтобы удалить свою запись \n*${usedPrefix}unreg* <Номер телефона>`
+  if (!Reg.test(text)) throw `⚠️ Formato incorrecto\n\n ✳️ Использование команды: *${usedPrefix + command} имя. возраст*\n📌Примеры : *${usedPrefix + command}* ${name2}.16`
   let [_, name, splitter, age] = text.match(Reg)
-  if (!name) throw '✳️ El nombre no puede estar vacío'
-  if (!age) throw '✳️ La edad no puede estar vacía'
-  if (name.length >= 30) throw '✳️ El nombre es demasiado largo' 
+  if (!name) throw '✳️ Имя не может быть пустым'
+  if (!age) throw '✳️ Возраст не может быть пустым'
+  if (name.length >= 30) throw '✳️ Имя слишком длинное' 
   age = parseInt(age)
-  if (age > 100) throw '👴🏻 Wow el abuelo quiere jugar al bot'
-  if (age < 5) throw '🚼  hay un abuelo bebé jsjsj '
+  if (age > 100) throw '👴🏻 Вау, дедушка хочет поиграть в бота'
+  if (age < 5) throw '🚼 есть дедушка, малыш! '
   user.name = name.trim()
   user.age = age
   user.regTime = + new Date
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
   m.reply(`
-┌─「 *REGISTRADO* 」─
-▢ *Nombre:* ${name}
-▢ *Edad* : ${age} años
-▢ *Numero de serie* :
+┌─「 *РЕГИСТРАЦИЯ* 」─
+▢ *Имя:* ${name}
+▢ *Возраст* : ${age} 
+▢ *Номер телефона* :
 ${sn}
 └──────────────
 
- *${usedPrefix}help* para ver el Menu
+ *${usedPrefix}help* пункт главного меню
 `.trim())
 }
 handler.help = ['reg'].map(v => v + ' <nombre.edad>')
