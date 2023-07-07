@@ -2,20 +2,20 @@
 import yts from 'yt-search'
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 	
-	if (!text) throw `✳️ Ingresa el título de una canción\n\n📌Ejemplo *${usedPrefix + command}* Lil Peep hate my life`
+	if (!text) throw `✳️ Введите название песни\n\n📌Пример *${usedPrefix + command}* бля я хз просто тут рандом напиши и все`
 	let res = await yts(text)
 	let vid = res.videos[0]
-	if (!vid) throw `✳️ Vídeo/Audio no encontrado`
+	if (!vid) throw `✳️ Видео/Аудио не найдено`
 	let { title, description, thumbnail, videoId, timestamp, views, ago, url } = vid
 	//const url = 'https://www.youtube.com/watch?v=' + videoId
 	m.react('🎧')
 	let play = `
-	≡ *FG MUSIC*
+	≡ *Батон Миюзикал*
 ┌──────────────
-▢ 📌 *Título* : ${title}
-▢ 📆 *Publicado:* ${ago}
-▢ ⌚ *Duración:* ${timestamp}
-▢ 👀 *Vistas:* ${views}
+▢ 📌 *Заголовок* : ${title}
+▢ 📆 *Печатный:* ${ago}
+▢ ⌚ *Продолжительность:* ${timestamp}
+▢ 👀 *Просмотров:* ${views}
 └──────────────`
  await conn.sendButton(m.chat, play, fgig, thumbnail, [
     ['🎶 MP3', `${usedPrefix}fgmp3 ${url}`],
