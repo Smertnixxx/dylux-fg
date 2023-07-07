@@ -2,19 +2,19 @@
 let reg = 40
 let handler = async (m, { conn, args, usedPrefix, command }) => {
     let fa = `
-Cuanto quieres apostar? 
+Сколько вы хотите поставить? 
 
-📌 Ejemplo :
+📌 Привер :
 *${usedPrefix + command}* 100`.trim()
     if (!args[0]) throw fa
     if (isNaN(args[0])) throw fa
     let apuesta = parseInt(args[0])
     let users = global.db.data.users[m.sender]
     let time = users.lastslot + 10000
-    if (new Date - users.lastslot < 10000) throw `⏳ Espere *${msToTime(time - new Date())}* para usar de nuevo`
-    if (apuesta < 100) throw '✳️ Mínimo de la apuesta es *100 XP*'
+    if (new Date - users.lastslot < 10000) throw `⏳ Ожидает *${msToTime(time - new Date())}* чтобы использовать снова`
+    if (apuesta < 100) throw '✳️ Минимальная ставка составляет *100 XP*'
     if (users.exp < apuesta) {
-        throw `✳️ No tienes suficiente *XP*`
+        throw `✳️ Вам не хватает *XP*`
     }
 
     let emojis = ["🕊️", "🦀", "🦎"];
@@ -41,19 +41,19 @@ Cuanto quieres apostar?
     }
     let end;
     if (a == b && b == c) {
-        end = `🎁 GANASTE\n *+${apuesta + apuesta} XP*`
+        end = `🎁 Выйграл\n *+${apuesta + apuesta} XP*`
         users.exp += apuesta + apuesta
     } else if (a == b || a == c || b == c) {
-        end = `🔮 Casi lo logras sigue intentando :) \nTen *+${reg} XP*`
+        end = `🔮 Ты почти добился этого, продолжай пытаться :) \nTen *+${reg} XP*`
         users.exp += reg
     } else {
-        end = `😔 Perdiste  *-${apuesta} XP*`
+        end = `😔 Потерял  *-${apuesta} XP*`
         users.exp -= apuesta
     }
     users.lastslot = new Date * 1
     return await m.reply(
         `
-       🎰 ┃ *SLOTS* 
+       🎰 ┃ *Слоты* 
      ───────────
        ${x[0]} : ${y[0]} : ${z[0]}
        ${x[1]} : ${y[1]} : ${z[1]}
