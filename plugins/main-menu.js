@@ -28,23 +28,13 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-◈ ━━━━━ *DyLux  ┃ ᴮᴼᵀ* ━━━━━ ◈
+◈ ━━━━━ *Baton  ┃ ᴮᴼᵀ* ━━━━━ ◈
  
-👋🏻 _Hola_ *%name*
-🧿 Nivel : *%level* 
-👥 Usuarios : %totalreg
-📈 Tiempo activo : %muptime
-─────────────
-▢ Crea tu propio bot 
-• https://youtu.be/xFqjKN1Qt80
-▢ Descarga *FGWhatsApp*
-• https://fgmods.epizy.com
-─────────────
-%readmore
-Ⓟ = Premium
-ⓓ = Diamantes
------  -----  -----  -----  -----
-  ≡ *LISTA DE MENUS*
+👋🏻 _Привет!_ *%name*
+🧿 Уровень : *%level* 
+👥 Пользователь : %totalreg
+📈 Рабочее время : %muptime
+─────────────• 
 `.trimStart(),
   header: '┌─⊷ *%category*',
   body: '▢ %cmd %isdiamond %isPremium',
