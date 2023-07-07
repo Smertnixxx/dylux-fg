@@ -10,7 +10,7 @@ handler.before = async function (m, {conn, isAdmin, isBotAdmin, isOwner} ) {
 
     for (let prefix of forbidPrefixes) {
       if (m.sender.startsWith(prefix)) {
-        m.reply('✳️ En este grupo solo se permite personas de habla hispana', m.sender)
+        m.reply('✳️ в эту группу допускаются только самые пидатые челики', m.sender)
         await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');
         return false;
       }
