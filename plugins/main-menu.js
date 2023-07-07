@@ -100,7 +100,6 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
           if (!(tag in tags) && tag) tags[tag] = tag
     conn.menu = conn.menu ? conn.menu : {}
     let before = conn.menu.before || defaultMenu.before
-    let header = conn.menu.header || defaultMenu.header
     let body = conn.menu.body || defaultMenu.body
     let footer = conn.menu.footer || defaultMenu.footer
     let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : /${conn.user.jid.split`@`[0]}`) + defaultMenu.after
