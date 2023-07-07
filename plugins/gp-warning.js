@@ -18,11 +18,11 @@ let handler = async (m, { conn, text, args, groupMetadata, usedPrefix, command }
 ▢ *Предупреждений:* ${warn + 1}/${war}
 ▢ *Причина:* ${text}`, null, { mentions: [who] }) 
             m.reply(`
-⚠️ *ADVERTENCIA* ⚠️
+⚠️ *ПРЕДУПРЕЖДЕНИЕ* ⚠️
 Вы получили предупреждение от администратора
 
 ▢ *Warns:* ${warn + 1}/${war} 
-Si recibes *${war}* advertencias serás eliminado automáticamente del grupo`, who)
+Si recibes *${war}* предупреждения вы будете автоматически удалены из группы`, who)
         } else if (warn == war) {
             global.db.data.users[who].warn = 0
             m.reply(`⛔ Пользователь превысил *${war}* предупреждения, следовательно, будут удалены`)
