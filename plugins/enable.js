@@ -180,9 +180,9 @@ const listMessage = {
       
     default:
       if (!/[01]/.test(command)) return m.reply(`
-≡ Lista de Opciones
+≡ Список опций
 
-┌─⊷ *ADMIN*
+┌─⊷ *Админы*
 ▢ welcome
 ▢ antilink
 ▢ detect 
@@ -190,16 +190,16 @@ const listMessage = {
 ▢ nsfw
 ▢ onlylatinos
 └───────────── 
-┌─⊷ *USERS*
+┌─⊷ *Пользователи*
 ▢ autolevelup
 ▢ chatbot 
 └─────────────
-┌─⊷ *OWNER*
+┌─⊷ *Гланые*
 ▢ public
 ▢ solopv
 ▢ sologp
 └─────────────
-*📌 Ejemplo :*
+*📌 Пример :*
 *${usedPrefix}on* welcome
 *${usedPrefix}off* welcome
 `)
@@ -207,7 +207,7 @@ const listMessage = {
 }
 
 m.reply(`
-✅ *${type}* Se *${isEnable ? 'Activó' : 'Desactivó'}* ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}
+✅ *${type}* Se *${isEnable ? 'Активировал' : 'Desactivó'}* ${isAll ? 'для этого бота' : isUser ? '' : 'для этого чата'}
 `.trim()) 
 
 }
