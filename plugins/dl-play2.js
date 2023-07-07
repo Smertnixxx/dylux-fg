@@ -4,12 +4,12 @@ import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
 let limit = 320
 let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
   
-    if (!text) throw `✳️ Ingresa el título de una canción\n\n📌Ejemplo *${usedPrefix + command}* Lil Peep hate my life`
+    if (!text) throw `✳️ Введите название песни\n\n📌Пример *${usedPrefix + command}* а4 24 часа бомбим киев`
   let chat = global.db.data.chats[m.chat]
   let res = await yts(text)
   //let vid = res.all.find(video => video.seconds < 3600)
   let vid = res.videos[0]
-  if (!vid) throw `✳️ Vídeo/Audio no encontrado`
+  if (!vid) throw `✳️ Видео/Аудио не найдено`
   let isVideo = /vid$/.test(command)
   m.react('🎧') 
   
@@ -21,25 +21,25 @@ let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, comman
   let title = await yt.title
   let size = await (isVideo ? yt.video[q].fileSizeH : yt.audio[q].fileSizeH)
   let play = `
-	≡ *FG MUSIC*
+	≡ *Батон Миюзикал*
 ┌──────────────
-▢ 📌 *Título* : ${vid.title}
-▢ 📆 *Publicado:* ${vid.ago}
-▢ ⌚ *Duración:* ${vid.timestamp}
-▢ 👀 *Vistas:* ${vid.views}
+▢ 📌 *Загаловок* : ${vid.title}
+▢ 📆 *Печатный:* ${vid.ago}
+▢ ⌚ *Продолжительность:* ${vid.timestamp}
+▢ 👀 *Вид:* ${vid.views}
 └──────────────
 
 _Enviando..._`
 conn.sendFile(m.chat, vid.thumbnail, 'play', play, m, null, rpig)
 
-if (size.split('MB')[0] >= limit) return m.reply(` ≡  *FG YTDL*\n\n▢ *⚖️Peso* : ${size}\n▢ *🎞️Calidad* : ${q}\n\n▢ _El archivo supera el límite de descarga_ *+${limit} MB*`) 
-if (size.includes('GB')) return m.reply(` ≡  *FG YTDL*\n\n▢ *⚖️Peso* : ${size}\n▢ *🎞️Calidad* : ${q}\n\n▢ _El archivo supera el límite de descarga_ *+${limit} MB*`)   
+if (size.split('MB')[0] >= limit) return m.reply(` ≡  *FG YTDL*\n\n▢ *⚖️Размер* : ${size}\n▢ *🎞️Calidad* : ${q}\n\n▢ _файл превышает лимит загрузки_ *+${limit} MB*`) 
+if (size.includes('GB')) return m.reply(` ≡  *FG YTDL*\n\n▢ *⚖️Размер* : ${size}\n▢ *🎞️Качество* : ${q}\n\n▢ _файл превышает лимит загрузки_ *+${limit} MB*`)   
 	  conn.sendFile(m.chat, dl_url, title + '.mp' + (3 + /vid$/.test(command)), `
  ≡  *FG YTDL*
   
-▢ *📌Título* : ${title}
-▢ *🎞️Calidad* : ${q}
-▢ *⚖️Peso* : ${size}
+▢ *📌Заголовок* : ${title}
+▢ *🎞️Качество* : ${q}
+▢ *⚖️Размер* : ${size}
 `.trim(), m, false, { mimetype: isVideo ? '' : 'audio/mpeg', asDocument: chat.useDocument })
 		m.react(done) 
     } catch {
