@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 	
  let name = conn.getName(m.sender)
-  if (!text) throw `Hola *${name}* Quieres charlar un rato? \nResponde con *${usedPrefix + command}* (tu mensaje) \n\n📌 Ejemplo : *${usedPrefix + command}* Hola bot`
+  if (!text) throw `Hola *${name}* Хочешь немного поболтать? \nНе отвечает на запрос *${usedPrefix + command}* (ваше сообщение \n\n📌 Пример : *${usedPrefix + command}* Привет бот`
   m.react('🗣️') 
   //let res = await fetch(global.API('https://api.simsimi.net', '/v2/', { text: encodeURIComponent(m.text), lc: "es" }, ''))
   let res = await fetch(`https://api.simsimi.net/v2/?text=${text}&lc=es`)
