@@ -8,10 +8,10 @@ let handler = async (m, { conn, args, groupMetadata}) => {
        let warn = global.db.data.users[who].warn
        if (warn > 0) {
          global.db.data.users[who].warn -= 1
-         m.reply(`⚠️ *Удалить Предупреждение *
+         m.reply(`⚠️ *Удалить Предупреждение*
          
-▢ Warns: *-1*
-▢ Warns total: *${warn - 1}*`)
+▢ Предупреждений удалено: *-1*
+▢ Предупреждений сейчас: *${warn - 1}*`)
          m.reply(`✳️ Администратор уменьшил свое предупреждение, теперь у вас есть *${warn - 1}*`, who)
          } else if (warn == 0) {
             m.reply('✳️ У пользователя нет никаких предупреждений')
