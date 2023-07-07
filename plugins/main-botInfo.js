@@ -42,37 +42,19 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   let speed = neww - old
   
 let infobt = `
-≡ *INFO BOT*
+≡ *Информация о боте*
   
-*ESTADO*
-▢ *${groupsIn.length}* Chats de grupo
-▢ *${groupsIn.length}* Gropos unidos
-▢ *${groupsIn.length - groupsIn.length}* Grupos abandonados
-▢ *${chats.length - groupsIn.length}* Chats privados
-▢ *${chats.length}* Total Chats
+*Группы*
+▢ *${groupsIn.length}* Групповые чаты
+▢ *${groupsIn.length}* Соединенные чаты
+▢ *${groupsIn.length - groupsIn.length}* Заброшенные группы
+▢ *${chats.length - groupsIn.length}* Личные чаты
+▢ *${chats.length}* Всего чатов
 
 *≡ OWNER*
-  *FG98*
-▢ Instagram :
-  • https://instagram.com/fg98_ff
-▢ WhatsApp :
-  • (escribe solo si es necesario) 
-▢ GitHub :
-  • https://github.com/FG98F
-▢ Telegram : 
-  • t.me/fgsupp_bot (FG) 
-  • t.me/fg98ff (canal)
-  • t.me/fgawgp (grupo)
-▢ YouTube : 
-  • https://youtube.com/fg98f
-  
- *≡ HELPERS*
-  *CRISS*
-▢ Instagram : https://www.instagram.com/sayurizuniga3
-▢ WhatsApp : wa.me/
-  *ANDREA*
-▢ Instagram : https://
-▢ WhatsApp : wa.me/573125484672
+  *Smertnix*
+▢ VK: https://vk.com/wildmoder
+▢ WhatsApp: +7 931 954-72-47
 
  *≡ S E R V E R*
 *🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
