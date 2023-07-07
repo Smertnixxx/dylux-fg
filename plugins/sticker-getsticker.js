@@ -3,7 +3,7 @@ import fg from 'api-dylux'
 import fetch from 'node-fetch'
 import { sticker } from '../lib/sticker.js'
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-    if (!args[0]) throw `✳️ ingrese lo que quiere buscar \n\n📌*Ejemplo:*\n${usedPrefix + command} homero`
+    if (!args[0]) throw `✳️ введите то, что вы хотите найти \n\n📌*Пример:*\n${usedPrefix + command} homero`
     
     //Resultados de https://getstickerpack.com/
     try {
@@ -11,18 +11,18 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
    let json = await res.json()*/
    let json = await fg.StickerSearch(text) 
     m.reply(`
-✅ Resultado
+✅ Результат
 
-▢ *Titulo:* ${json.title}
-▢ *Total stickers:* ${json.sticker_url.length}
-▢ *Tiempo estimado de envio:* _*${json.sticker_url.length * 2} s*_`)
+▢ *Название:* ${json.title}
+▢ *Текущий стикер:* ${json.sticker_url.length}
+▢ *Расчетное время доставки:* _*${json.sticker_url.length * 2} s*_`)
     for (let i of json.sticker_url) {
         const stiker = await sticker(false, i, global.packname, global.author)
         await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
         //await delay(1500)
     }
     } catch (e) {
-	m.reply(`❇️ Error: prueba con otro`)
+	m.reply(`❇️ Ошибка: попробуйте другой`)
 	} 
 }
 handler.help = ['getsticker']
