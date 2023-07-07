@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     conn.sendFile(m.chat, result.videoUrl, 'fb.mp4', tex, m);
     m.react(done);
   } catch (error) {
- 	m.reply('Error: Intente de nuevo con otro link')
+ 	m.reply('Ошибка: Повторите попытку с другой ссылкой')
  	} 
 }
 handler.help = ['facebook'].map(v => v + ' <url>')
