@@ -5,10 +5,10 @@ let handler = async (m, { conn, args, groupMetadata}) => {
        let warn = global.db.data.users[who].warn
        let name = conn.getName(who)
       m.reply(`
- *ADVERTENCIAS*
+ *ПРЕДУПРЕЖДЕНИЯ*
 
-▢ *Nombre :* ${name} 
-▢ *Warns :* ${warn}`)
+▢ *Имя:* ${name} 
+▢ *Предупреждение :* ${warn}`)
 }
 
 handler.help = ['warns']
