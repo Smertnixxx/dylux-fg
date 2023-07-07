@@ -5,7 +5,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     }[(args[0] || '')]
     if (isClose === undefined)
         throw `
-*✳️ Elija una opción:*
+*✳️ Выберете вариант:*
   *▢ ${usedPrefix + command} close*
   *▢ ${usedPrefix + command} open*
 `.trim()
