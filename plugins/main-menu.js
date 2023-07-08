@@ -5,25 +5,25 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
-  'main': 'ОТНОСИТЕЛЬНО',
+  'main': 'ИНФОРМАЦИЯ',
   'game': 'ИГРЫ',
   'econ': 'УРОВЕНЬ И ЭКОНОМИКА',
-  'rg': 'РЕЕСТР',
+  'rg': 'РЕГИСТРАЦИЯ',
   'sticker': 'СТИКЕРЫ',
   'img': 'КАРТИНКИ',
   'maker': 'СОЗДАТЕЛЬ',
   'prem': 'ПРЕМИУМ',
   'group': 'ГРУППА',
-  'nable': 'ОТКЛЮЧИТЬ ПАРАМЕТРЫ', 
-  'nime': 'ANIME',
-  'rnime': 'ANIME REACCION',
+  'nable': 'ВКЛЮЧИТЬ/ВЫКЛЮЧИТЬ БОТА', 
+  'nime': 'АНИМЕ',
+  'rnime': 'АНИМЕ РЕАКЦИЯ',
   'dl': 'РАЗГРУЗКИ',
   'tools': 'ИНСТРУМЕНТЫ',
   'fun': 'ВЕСЕЛЬЕ',
   'cmd': 'БАЗА ДАННЫХ',
   'nsfw': 'NSFW +18', 
   'ansfw': 'NSFW ANIME',
-  'owner': 'ГЛАНЫЕ', 
+  'owner': 'КОМАНДЫ ДЛЯ СОЗДАТЕЛЯ', 
   'advanced': 'ПРОДВИНУТЫЙ',
 }
 const defaultMenu = {
