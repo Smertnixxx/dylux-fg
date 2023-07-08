@@ -2,7 +2,7 @@
 let handler = async (m, { conn }) => {
 
 m.reply(`
-≡  *Batonᴮᴼᵀ ┃ SUPPORT*
+≡  *ULTIMATEᴮᴼᵀ ┃ SUPPORT*
 
 ◈ ━━━━━━━━━━━━━━━━━━━━ ◈
 разработчик бота - +79319547247
