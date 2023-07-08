@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     if (!(who in global.db.data.users)) throw `✳️ Пользователя нет в моей базе данных`
     let users = global.db.data.users[who]
     let rob = Math.floor(Math.random() * ro)
-    if (users.exp < rob) return m.reply(`🔖 @${who.split`@`[0]} он имеет менее *${ro} xp*\nНе воруй у подлеца":`, null, { mentions: [who] })    
+    if (users.exp < rob) return m.reply(`🔖 @${who.split`@`[0]} он имеет менее *${ro} xp*\n\У него нечего воровать :(":`, null, { mentions: [who] })    
    global.db.data.users[m.sender].exp += rob
    global.db.data.users[who].exp -= rob
   
@@ -36,6 +36,6 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     minutes = (minutes < 10) ? "0" + minutes : minutes
     seconds = (seconds < 10) ? "0" + seconds : seconds
   
-    return hours + " Hora(s) " + minutes + " Minuto(s)"
+    return hours + " Часов " + minutes + " Минут "
   }
   
