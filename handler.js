@@ -575,16 +575,16 @@ Para desactivar esta función, escriba
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '👑 Este comando solo puede ser utilizado por el *Creador del bot*',
-        owner: '🔱 Este comando solo puede ser utilizado por el *Dueño del Bot*',
-        mods: '🔰  Esta función es solo para *Para moderadores del Bot*',
-        premium: '💠 Este comando es solo para miembros *Premium*\n\nEscribe */premium* para más info',
-        group: '⚙️ ¡Este comando solo se puede usar en grupos!',
-        private: '📮 Este comando solo se puede usar en el chat *privado del Bot*',
-        admin: '🛡️ Este comando es solo para *Admins* del grupo',
-        botAdmin: '💥 ¡Para usar este comando debo ser *Administrador!*',
-        unreg: '📇 Regístrese para usar esta función  Escribiendo:\n\n*/reg nombre.edad*\n\n📌Ejemplo : */reg dylux.16*',
-        restrict: '🔐 Esta característica está *deshabilitada*'
+        rowner: '👑 Эта команда может использоваться только * Создателем бота*',
+        owner: '🔱 Эта команда может использоваться только * Владельцем бота*',
+        mods: '🔰  Эта функция предназначена только для * Для модераторов бота*',
+        premium: '💠 Эта команда предназначена только для участников *Premium*\n\nпиши */premium* для получения дополнительной информации',
+        group: '⚙️ Эту команду можно использовать только в группах!',
+        private: '📮 Эту команду можно использовать только в приватном чате * бота*',
+        admin: '🛡️ Эта команда предназначена только для * Администраторов * группы',
+        botAdmin: '💥 Чтобы использовать эту команду, я должен быть * Администратором!*',
+        unreg: '📇 Зарегистрируйтесь, чтобы использовать эту функцию  напишите:\n\n*/reg (Имя).(Сколько вам лет)*\n\n📌Пример : */reg OpenAI.16*',
+        restrict: '🔐 Эта функция *отключена*'
     }[type]
     if (msg) return m.reply(msg)
 }
