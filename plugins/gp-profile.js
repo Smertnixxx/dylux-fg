@@ -22,14 +22,14 @@ let str = `
    • ${username} ${registered ? '\n   • ' + name + ' ': ''}
    • @${who.replace(/@.+/, '')}
 ▢ *📱Номера:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-▢ *🔗Link:* wa.me/${who.split`@`[0]}${registered ? '\n▢ *🎈Возраст*: ' + age + ' años' : ''}
+▢ *🔗Link:* wa.me/${who.split`@`[0]}${registered ? '\n▢ *🎈Возраст*: ' + age + ' Лет' : ''}
 ▢ *⚠️Предупреждение:* ${warn}/${maxwarn}
 ▢ *💎 Алмазы :* ${diamond}
 ▢ *🆙 Уровень* : ${level}
 ▢ *⬆️ XP* : Total ${exp} (${user.exp - min} / ${xp})\n${math <= 0 ? `согласный *${usedPrefix}levelup*` : `_*${math}xp*_ Недостает для повышения уровня`}
 ▢ *🏆Ранг:* ${role}
-▢ *📇 Зарегистрированный :* ${registered ? 'Si': 'No'}
-▢ *⭐ Премиум* : ${prem ? 'Si' : 'No'}
+▢ *📇 Зарегистрированный :* ${registered ? 'Да': 'Нет'}
+▢ *⭐ Премиум* : ${prem ? 'Есть' : 'Нету'}
 └──────────────`
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
     m.react(done)
