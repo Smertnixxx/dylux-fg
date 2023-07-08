@@ -5,7 +5,7 @@ export function before(m) {
     if (user.afk > -1) {
         m.reply(`
   ✅ Ты перестал быть АФК
-${user.afkReason ? ' \n▢ *Razón :* ' + user.afkReason : ''}
+${user.afkReason ? ' \n▢ *Причина :* ' + user.afkReason : ''}
 ▢ *АФК Во Время :* ${(new Date - user.afk).toTimeString()}
   `.trim())
         user.afk = -1
