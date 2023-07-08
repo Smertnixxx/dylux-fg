@@ -4,7 +4,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let fa = `
 Сколько вы хотите поставить? 
 
-📌 Привер :
+📌 Пример :
 *${usedPrefix + command}* 100`.trim()
     if (!args[0]) throw fa
     if (isNaN(args[0])) throw fa
@@ -44,7 +44,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         end = `🎁 Выйграл\n *+${apuesta + apuesta} XP*`
         users.exp += apuesta + apuesta
     } else if (a == b || a == c || b == c) {
-        end = `🔮 Ты почти добился этого, продолжай пытаться :) \nTen *+${reg} XP*`
+        end = `🔮 Ты почти добился этого, продолжай пытаться :) \nДержи *+${reg} XP*`
         users.exp += reg
     } else {
         end = `😔 Потерял  *-${apuesta} XP*`
