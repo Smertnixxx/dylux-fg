@@ -2,7 +2,7 @@
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     let poin = 300
-    let reseqv = `✳️ Выберете камень/Бумага/Ножницы\n\nEjemplo : *${usedPrefix + command}* Бумага\n`
+    let reseqv = `✳️ Выберете камень/Бумага/Ножницы\n\n🌿Пример : *${usedPrefix + command}* Бумага\n`
     if (!text) throw reseqv
     var astro = Math.random()
 
