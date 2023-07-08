@@ -1,13 +1,14 @@
-let handler = async (m, { conn, text, participants, isAdmin, isOwner }) => {
-  if (m.isGroup) {
-    if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
-  } else return dfail('group', m, conn)
-  let users = participants.map(u => u.jid)
-  m.reply(`${text ? `${text}\n` : ''}┌─〔 Tag All 〕\n` + users.map(v => '├ @' + v.replace(/@.+/, '')).join`\n` + '\n└────')
+let handler = async (m, { conn, text, participants, isAdmin, isOwner, groupMetadata }) => {
+    let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
+    m.reply(`▢ Grupo : *${groupMetadata.subject}*\n▢ Miembros : *${participants.length}*${text ? `\n▢ Mensaje : ${text}\n` : ''}\n┌───⊷ *MENCIONES*\n` + users.map(v => '▢ @' + v.replace(/@.+/, '')).join`\n` + '\n└──✪ Dylux ┃ ᴮᴼᵀ ✪──', null, {
+        mentions: users
+    })
 }
 
 handler.help = ['tagall']
-handler.tags = ['group', 'owner']
-handler.command = ['tagall', 'everyone']
+handler.tags = ['group']
+handler.command = ['tagall']
+handler.admin = true
+handler.group = true
 
-module.exports = handler
+export default handler
