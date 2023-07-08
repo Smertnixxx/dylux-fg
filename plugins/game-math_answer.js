@@ -13,13 +13,13 @@ handler.before = async function (m) {
             global.db.data.users[m.sender].exp += math.bonus
             clearTimeout(this.math[id][3])
             delete this.math[id]
-            m.reply(`✅ *Правильный ответ!*\n\n‣ Ganaste : *+${math.bonus} XP*`)
+            m.reply(`✅ *Правильный ответ!*\n\n‣ Выиграл : *+${math.bonus} XP*`)
         } else {
             if (--this.math[id][2] == 0) {
                 clearTimeout(this.math[id][3])
                 delete this.math[id]
-                m.reply(`*Se acabó las oportunidades*\n\n Respuesta : *${math.result}*`)
-      } else m.reply(`❎ *Неправильный ответ*\n\nВсе еще есть  ${this.math[id][2]} oportunidades`)
+                m.reply(`*Попытки закончились*\n\n Ответ : *${math.result}*`)
+      } else m.reply(`❎ *Неправильный ответ*\n\nВсе еще есть  ${this.math[id][2]} Попытки`)
         }
     }
     return !0
