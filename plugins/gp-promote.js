@@ -6,7 +6,7 @@ var number = text.split`@`[1]
 }else if(!isNaN(text)) {
 var number = text
 }
-if(!text && !m.quoted) return conn.reply(m.chat, `✳️ Использование команд \n *${usedPrefix + command}* @tag  (o responda un mensaje)`, m)
+if(!text && !m.quoted) return conn.reply(m.chat, `✳️ Использование команд \n *${usedPrefix + command}* @tag  (или ответьте на сообщение)`, m)
 if(number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `✳️ Неправильный номер`, m)
 try {
 if(text) {
