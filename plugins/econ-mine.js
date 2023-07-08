@@ -7,7 +7,7 @@ let handler = async (m, { conn }) => {
   if (new Date - global.db.data.users[m.sender].lastmiming < 14400000) throw `⏳ Ожидание_ *${msToTime(time - new Date())}* _чтобы вернуться в шахту_`
   global.db.data.users[m.sender].exp += hasil
   m.reply(`
-🎉 Отлично! заминировал *${hasil} XP*`)
+🎉 Отлично! вы заработали *${hasil} XP*`)
   global.db.data.users[m.sender].lastmiming = new Date * 1
 }
 handler.help = ['mine']
@@ -26,5 +26,5 @@ function msToTime(duration) {
   minutes = (minutes < 10) ? "0" + minutes : minutes
   seconds = (seconds < 10) ? "0" + seconds : seconds
 
-  return hours + " hora(s) " + minutes + " minuto(s) " + seconds + " segundo(s)" 
+  return hours + " часов " + minutes + " минут " + seconds + " секунд " 
 }
