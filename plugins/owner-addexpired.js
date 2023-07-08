@@ -10,7 +10,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     var now = new Date() * 1
     if (now < global.db.data.chats[who].expired) global.db.data.chats[who].expired += nDays
     else global.db.data.chats[who].expired = now + nDays
-    let teks = `✅ Были установлены дни истечения срока действия для \n*${await conn.getName(who)}* \n\n*Durante:* ${args[0]} Días\n\n*Cuenta regresiva :* ${msToDate(global.db.data.chats[who].expired - now)}`
+    let teks = `✅ Были установлены дни истечения срока действия для \n*${await conn.getName(who)}* \n\n*В течение:* ${args[0]} Дней\n\n*Обратный отсчет :* ${msToDate(global.db.data.chats[who].expired - now)}`
     conn.reply(m.chat, teks, m)
 }
 handler.help = ['expired <días>']
@@ -24,5 +24,5 @@ function msToDate(ms) {
   let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) % 24
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [d, ' *Días*\n ', h, ' *Horas*\n ', m, ' *Minutos*\n ', s, ' *Segundos* '].map(v => v.toString().padStart(2, 0)).join('')
+  return [d, ' *Дней*\n ', h, ' *Часов*\n ', m, ' *Минут*\n ', s, ' *Секунд* '].map(v => v.toString().padStart(2, 0)).join('')
 }
