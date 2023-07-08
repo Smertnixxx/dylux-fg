@@ -16,7 +16,7 @@ export async function before(m, { conn }) {
  *${before}* ‣  *${user.level}*
  Ранг : *${user.role}*
  
- _para desactivar escribe_
+ _для отключения введите_
 _*/off autolevelup*_
 	`.trim())
     }
