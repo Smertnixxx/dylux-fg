@@ -481,8 +481,8 @@ export async function participantsUpdate({ id, participants, action }) {
                         pp = await this.profilePictureUrl(user, 'image')
                         ppgp = await this.profilePictureUrl(id, 'image')
                         } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Bienvenido, @user').replace('@group', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'Desconocido') :
-                            (chat.sBye || this.bye || conn.bye || 'Adiós, @user')).replace('@user', '@' + user.split('@')[0])
+                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Добро пожаловать, @user').replace('@group', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'Неизвестный') :
+                            (chat.sBye || this.bye || conn.bye || 'Пока, @user')).replace('@user', '@' + user.split('@')[0])
                          
                             let wel = API('fgmods', '/api/welcome', {
                                 username: await this.getName(user),
@@ -511,11 +511,11 @@ export async function participantsUpdate({ id, participants, action }) {
             }
             break
         case 'promote':
-            text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
+            text = (chat.sPromote || this.spromote || conn.spromote || '@user теперь он администратор')
         case 'demote':
             let pp = await this.profilePictureUrl(participants[0], 'image').catch(_ => 'https://i.imgur.com/whjlJSf.jpg') 
             if (!text)
-                text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ya no es administrador')
+                text = (chat.sDemote || this.sdemote || conn.sdemote || '@user вы больше не являетесь администратором')
             text = text.replace('@user', '@' + participants[0].split('@')[0])
             if (chat.detect)    
             this.sendFile(id, pp, 'pp.jpg', text, null, false, { mentions: this.parseMention(text) })
