@@ -1,12 +1,15 @@
-let handler = async (m, { conn, text, isAdmin, isOwner, usedPrefix, command }) => {
-  if (text) {
-    if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
-    db.data.chats[m.chat].sWelcome = text
-    m.reply('Welcome berhasil diatur\n@user (Mention)\n@subject (Judul Grup)\n@desc (Deskripsi Grup)')
-  } else throw `Penggunaan:\n${usedPrefix + command} <teks>\n\nContoh:\n${usedPrefix + command} selamat datang @user digrup @subject\n\n@desc`
-}
-handler.help = ['setwelcome <teks>']
-handler.tags = ['owner', 'group']
-handler.command = /^setwelcome$/i
+//import db from '../lib/database.js'
 
-module.exports = handler
+let handler = async (m, { conn, text, isROwner, isOwner }) => {
+  if (text) {
+    global.db.data.chats[m.chat].sWelcome = text
+    m.reply('✅ Se configuro el mensaje de bienvenida')
+  } else throw `✳️ Ingrese el mensaje de Bienvenida\n\n@user (mención)\n@group (Nombre de grupo)\n@desc (description de grupo)`
+}
+handler.help = ['setwelcome <text>']
+handler.tags = ['group']
+handler.command = ['setwelcome'] 
+handler.admin = true
+handler.owner = false
+
+export default handler
