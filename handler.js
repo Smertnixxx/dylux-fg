@@ -341,11 +341,11 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
-                    this.reply(m.chat, `✳️ Tus diamantes se agotaron\nuse el siguiente comando para comprar más diamantes \n*${usedPrefix}buy* <cantidad> \n*${usedPrefix}buyall*`, m)
+                    this.reply(m.chat, `✳️ Твои бриллианты закончились\nиспользуйте следующую команду, чтобы купить больше бриллиантов \n*${usedPrefix}buy* <cantidad> \n*${usedPrefix}buyall*`, m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
-                    this.reply(m.chat, `✳️ nivel requerido ${plugin.level} para usar este comando. \nTu nivel ${_user.level}`, m)
+                    this.reply(m.chat, `✳️ требуемый уровень ${plugin.level} чтобы использовать эту команду. \nВаш уровень ${_user.level}`, m)
                     continue // If the level has not been reached
                 }
                 let extra = {
