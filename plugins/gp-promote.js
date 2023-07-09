@@ -7,7 +7,7 @@ var number = text.split`@`[1]
 var number = text
 }
 if(!text && !m.quoted) return conn.reply(m.chat, `✳️ Использование команд \n *${usedPrefix + command}* @tag  (или ответьте на сообщение)`, m)
-if(number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `✳️ Неправильный номер`, m)
+if(number.length > 13 || (number.length < 11 && number.length > 0)) return conn.reply(m.chat, `✳❌ Неправильный номер`, m)
 try {
 if(text) {
 var user = number + '@s.whatsapp.net'
@@ -19,7 +19,7 @@ var user = number + '@s.whatsapp.net'
 } catch (e) {
 } finally {
 conn.groupParticipantsUpdate(m.chat, [user], 'promote')
-m.reply(`✅ *%name* стал *Администратором*`)
+m.reply(`👑 Пользователь повышен до *Администратор*`)
 }}
 handler.help = ['promote']
 handler.tags = ['group']
