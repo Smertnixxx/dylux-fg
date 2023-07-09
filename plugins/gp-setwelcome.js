@@ -1,15 +1,12 @@
-//import db from '../lib/database.js'
-
-let handler = async (m, { conn, text, isROwner, isOwner }) => {
+let handler = async (m, { conn, text, isAdmin, isOwner, usedPrefix, command }) => {
   if (text) {
-    global.db.data.chats[m.chat].sWelcome = text
-    m.reply('✨ Настроено приветственное сообщение')
-  } else throw `✳️ Введите приветственное сообщение\n\n@user (упоминание)\n@group (Название группы)\n@desc (Описание группы)`
+    if (!(isAdmin || isOwner)) return dfail('admin', m, conn)
+    db.data.chats[m.chat].sWelcome = text
+    m.reply('Welcome berhasil diatur\n@user (Mention)\n@subject (Judul Grup)\n@desc (Deskripsi Grup)')
+  } else throw `Penggunaan:\n${usedPrefix + command} <teks>\n\nContoh:\n${usedPrefix + command} selamat datang @user digrup @subject\n\n@desc`
 }
-handler.help = ['setwelcome <text>']
-handler.tags = ['group']
-handler.command = ['setwelcome'] 
-handler.admin = true
-handler.owner = false
+handler.help = ['setwelcome <teks>']
+handler.tags = ['owner', 'group']
+handler.command = /^setwelcome$/i
 
-export default handler
+module.exports = handler
