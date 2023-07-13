@@ -14,7 +14,7 @@ let handler = async (m, { conn }) => {
 	})
 }
 
-handler.help = ['Заблокированные пользователи']
+handler.help = ['blocklist (заблокированные пользователи)']
 handler.tags = ['main']
 handler.command = ['blocklist', 'listblock'] 
 
