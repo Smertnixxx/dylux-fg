@@ -12,7 +12,7 @@ let handler = async function (m, { conn, args, usedPrefix}) {
 handler.help = ['Отвязать учетную запись'] 
 handler.tags = ['rg']
 
-handler.command = ['Отвязать','hjj','unreg'] 
+handler.command = ['Делрег','hjj','unreg'] 
 handler.register = true
 
 export default handler
