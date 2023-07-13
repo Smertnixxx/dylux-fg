@@ -11,7 +11,7 @@ let handler = async (m, { text, conn }) => {
 ▢ *Причина:* ${text ? text : ''}
   `)
 }
-handler.help = ['afk <razon>']
+handler.help = ['afk <Причина>']
 handler.tags = ['fun']
 handler.command = ['afk']
 handler.group = true
