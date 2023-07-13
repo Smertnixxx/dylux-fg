@@ -29,10 +29,10 @@ ${sn}
  *${usedPrefix}help* пункт главного меню
 `.trim())
 }
-handler.help = ['reg'].map(v => v + ' <nombre.edad>')
+handler.help = ['Регистрация'].map(v => v + ' <Имя.Лет>')
 handler.tags = ['rg']
 
-handler.command = ['verify', 'reg', 'register', 'registrar'] 
+handler.command = ['verify', 'reg', 'register', 'Регистрация', 'registrar'] 
 
 export default handler
 
