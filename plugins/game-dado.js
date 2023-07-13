@@ -9,9 +9,9 @@ const da = [
 let handler = async (m, { conn }) => {
   conn.sendFile(m.chat, pickRandom(da), 'dado.webp', '', m)
 }
-handler.help = ['dado']
+handler.help = ['Кубик']
 handler.tags = ['game']
-handler.command = ['dado', 'dados'] 
+handler.command = ['Кубик', 'dados'] 
 
 export default handler
 
