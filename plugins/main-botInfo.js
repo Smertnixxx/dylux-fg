@@ -68,6 +68,6 @@ m.reply(infobt)
 }
 handler.help = ['info (информация о боте)']
 handler.tags = ['main']
-handler.command = ['info', 'infobot', 'botinfo']
+handler.command = ['info', 'infobot', 'инфо', 'botinfo']
 
 export default handler
