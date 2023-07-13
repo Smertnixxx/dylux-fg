@@ -66,7 +66,7 @@ ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.m
 m.reply(infobt)
 
 }
-handler.help = ['info']
+handler.help = ['info (информация о боте)']
 handler.tags = ['main']
 handler.command = ['info', 'infobot', 'botinfo']
 
