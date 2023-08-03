@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   if (text.includes('@0')) who = '0@s.whatsapp.net'
   else if (m.isGroup) who = cm.participant = m.mentionedJid[0]
   else who = m.chat
-  if (!who) return m.reply(`✳️ Использование команды\n\n*${usedPrefix + command}* hola que? @${m.sender.split`@`[0]} nada y tu`, null, { mentions: [m.sender] })
+  if (!who) return m.reply(`✳️ Использование команды\n\n*${usedPrefix + command}* привет, что? @${m.sender.split`@`[0]} ничего, и ты`, null, { mentions: [m.sender] })
   cm.key.fromMe = false 
   cm.message[m.mtype] = copy(m.msg)
   let sp = '@' + who.split`@`[0]
