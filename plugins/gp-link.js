@@ -11,7 +11,7 @@ let handler = async (m, { conn, args }) => {
     if (!me.admin) throw '✳️ Я не администратор'
     m.reply('https://chat.whatsapp.com/' + await conn.groupInviteCode(group))
 }
-handler.help = ['link']
+handler.help = ['Ссылка']
 handler.tags = ['group']
 handler.command = ['link', 'ссылка'] 
 
