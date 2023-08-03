@@ -22,7 +22,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 ┌─「 *РЕГИСТРАЦИЯ* 」─
 ▢ *Имя:* ${name}
 ▢ *Возраст* : ${age} 
-▢ *Номер телефона* :
+▢ *Ваш ключ* :
 ${sn}
 └──────────────
 
