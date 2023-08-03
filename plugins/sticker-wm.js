@@ -20,7 +20,7 @@ let handler = async (m, { conn, text, args }) => {
      else throw 'Преобразование не удалось'
   }
 }
-handler.help = ['take <nombre>|<autor>']
+handler.help = ['take <имя>|<автор>']
 handler.tags = ['sticker']
 handler.command = ['take', 'wm'] 
 
