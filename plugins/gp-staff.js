@@ -13,7 +13,7 @@ let text = `
 `.trim()
 conn.sendFile(m.chat, pp, 'staff.png', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
-handler.help = ['staff']
+handler.help = ['Персонал']
 handler.tags = ['group']
 handler.command = ['staff', 'admins', 'админы'] 
 handler.group = true
