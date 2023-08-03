@@ -13,7 +13,7 @@ let stiker = await sticker(false, marah, global.packname, global.author)
 }
 
 
-handler.help = ['trigger <@user>']
+handler.help = ['trigger <@Пользователь>']
 handler.tags = ['sticker']
 handler.command = ['trigger', 'triggered', 'ger'] 
 
