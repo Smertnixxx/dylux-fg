@@ -23,7 +23,7 @@ m.reply(`👑 Пользователь повышен до *Администра
 }}
 handler.help = ['promote']
 handler.tags = ['group']
-handler.command = ['promote', 'promover'] 
+handler.command = ['promote', 'повысить'] 
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
