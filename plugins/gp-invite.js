@@ -10,7 +10,7 @@ let link = 'https://chat.whatsapp.com/' + await conn.groupInviteCode(group)
         m.reply(`✅ Пользователю была отправлена ссылка для приглашения`) 
 
 }
-handler.help = ['invite <549xxx>']
+handler.help = ['Пригласить <Номер>']
 handler.tags = ['group']
 handler.command = ['invite','пригласить'] 
 handler.group = true
