@@ -35,7 +35,7 @@ let str = `
     m.react(done)
 
 }
-handler.help = ['perfil']
+handler.help = ['Профиль']
 handler.tags = ['group']
 handler.command = ['profile', 'профиль'] 
 
