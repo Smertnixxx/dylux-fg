@@ -14,7 +14,7 @@ let handler = async (m, {conn, usedPrefix}) => {
 *ПРИМЕЧАНИЕ :* 
 Вы можете купить 💎 алмазы, используя команды
 ❏ *${usedPrefix}buy <количество>*
-❏ *${usedPrefix}buyall*`, m, { mentions: [who] })
+❏ *${usedPrefix}buyall <купить все алмазы>*`, m, { mentions: [who] })
 }
 handler.help = ['balance']
 handler.tags = ['econ']
