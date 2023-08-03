@@ -16,9 +16,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
   _после этого бот автоматически выйдет из группы_`) 
     
 }
-handler.help = ['checkexpired']
+handler.help = ['аренда']
 handler.tags = ['group']
-handler.command = /^(checkexpired|cexpired)$/i
+handler.command = ['аренда']
 handler.group = true
 
 export default handler
