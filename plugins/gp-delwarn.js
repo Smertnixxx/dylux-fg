@@ -18,9 +18,9 @@ let handler = async (m, { conn, args, groupMetadata}) => {
         }
 
 }
-handler.help = ['унварн @Пользователь']
+handler.help = ['делварн @Пользователь']
 handler.tags = ['group']
-handler.command = ['delwarn', 'унварн'] 
+handler.command = ['delwarn', 'делварн'] 
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
