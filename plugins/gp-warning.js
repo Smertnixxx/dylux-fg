@@ -31,9 +31,9 @@ let handler = async (m, { conn, text, args, groupMetadata, usedPrefix, command }
             m.reply(`♻️ Вы были исключены из группы *${groupMetadata.subject}* потому что вы были предупреждены *${war}* разы`, who)
         }
 }
-handler.help = ['warn @user']
+handler.help = ['Пред @Пользователь']
 handler.tags = ['group']
-handler.command = ['warn', 'варн'] 
+handler.command = ['пред', 'варн'] 
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
