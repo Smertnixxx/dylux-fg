@@ -17,7 +17,7 @@ let prem = global.prems.includes(who.split`@`[0])
 let sn = createHash('md5').update(who).digest('hex')
 
 let str = `
-┌───「 *Профиль* 」
+┌───「 *˙·٠•●ПРОФИЛЬ●•٠·˙* 」
 ▢ *🔖 Имена:* 
    • ${username} ${registered ? '\n   • ' + name + ' ': ''}
    • @${who.replace(/@.+/, '')}
