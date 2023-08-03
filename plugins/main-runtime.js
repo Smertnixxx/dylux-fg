@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let muptime = clockString(_muptime)
    m.reply(`🏮 *Активный бот во время*  \n\n${muptime}`) 
 }
-handler.help = ['runtime']
+handler.help = ['runtime (Показывает сколько времени бот активен)']
 handler.tags = ['main']
 handler.command = ['runtime', 'uptime']
 export default handler
