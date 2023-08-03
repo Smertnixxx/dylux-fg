@@ -11,7 +11,7 @@ m.reply(`✅ Пользователь был кикнут из группы `)
 
 }
 
-handler.help = ['kick @user']
+handler.help = ['кик @Пользователь']
 handler.tags = ['group']
 handler.command = ['kick', 'кик', 'бан'] 
 handler.admin = true
