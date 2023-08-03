@@ -16,17 +16,17 @@ let handler = async (m, { conn, args, participants }) => {
        ≡ *ТАБЛИЦА ЛИДЕРОВ*
     
 ▢ *TOP ${len} XP* 🧬
-Ты : *${usersExp.indexOf(m.sender) + 1}* de *${usersExp.length}*
+Ты : *${usersExp.indexOf(m.sender) + 1}* из *${usersExp.length}*
 
 ${sortedExp.slice(0, len).map(({ jid, exp }, i) => `*${i + 1}.* ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*XP ${exp}*_`).join`\n`}
 
 ▢ *TOP ${len} Алмазы💎* 
-Ты : *${usersLim.indexOf(m.sender) + 1}* de *${usersLim.length}*
+Ты : *${usersLim.indexOf(m.sender) + 1}* из *${usersLim.length}*
 
 ${sortedLim.slice(0, len).map(({ jid, diamond }, i) => `*${i + 1}.* ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*Алмазов ${diamond}*_`).join`\n`}
 
 ▢ *TOP ${len} Уровень* ⬆️
-Ты : *${usersLevel.indexOf(m.sender) + 1}* de *${usersLevel.length}*
+Ты : *${usersLevel.indexOf(m.sender) + 1}* из *${usersLevel.length}*
 
 ${sortedLevel.slice(0, len).map(({ jid, level }, i) => `*${i + 1}.* ${participants.some(p => areJidsSameUser(jid, p.id)) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]} ➭ _*Уровень ${level}*_`).join`\n`}
 `.trim()
