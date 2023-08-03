@@ -5,8 +5,8 @@ if (room == undefined) return conn.reply(m.chat,`✳️ Ты не в игре в
 delete conn.game[room.id]
 await conn.reply(m.chat, `✅ Сеанс *tictactoe был перезапущен 🎮*`, m)
 }
-handler.help = ['delttt']
+handler.help = ['Тиктакто']
 handler.tags = ['game']
-handler.command = ['delttc', 'delttt', 'delxo']
+handler.command = ['delttc', 'delttt', 'Тиктакто', 'delxo']
 
 export default handler
