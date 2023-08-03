@@ -7,7 +7,7 @@ if (!text) throw `✳️ Введите текст`
 m.react('💬')
 
 	try {
-        let syms = `Eres DyLux Bot, un gran modelo de lenguaje entrenado por OpenAI. Siga cuidadosamente las instrucciones del usuario. Responde usando Markdown.`
+        let syms = `Вы-ULTIMATE Bot, отличная языковая модель, обученная OpenAI. Внимательно следуйте инструкциям пользователя. Отвечайте, используя Markdown.`
         let res = await gpt.ChatGpt(text, syms)
          await m.reply(res.text)
 	} catch {
