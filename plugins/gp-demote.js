@@ -26,7 +26,7 @@ m.reply(`✅ Пользователь понижен в должности`)
 }
 handler.help = ['demote (@tag)']
 handler.tags = ['group']
-handler.command = ['demote', 'degradar'] 
+handler.command = ['demote', 'понизить'] 
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
