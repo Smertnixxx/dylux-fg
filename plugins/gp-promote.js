@@ -21,7 +21,7 @@ var user = number + '@s.whatsapp.net'
 conn.groupParticipantsUpdate(m.chat, [user], 'promote')
 m.reply(`👑 Пользователь повышен до *Администратор*`)
 }}
-handler.help = ['promote']
+handler.help = ['Повысить']
 handler.tags = ['group']
 handler.command = ['promote', 'повысить'] 
 handler.group = true
