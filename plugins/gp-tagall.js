@@ -5,7 +5,7 @@ let handler = async (m, { conn, text, participants, isAdmin, isOwner, groupMetad
     })
 }
 
-handler.help = ['tagall']
+handler.help = ['Отметитьвсех']
 handler.tags = ['group']
 handler.command = ['tagall', 'отметитьвсех']
 handler.admin = true
