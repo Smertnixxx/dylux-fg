@@ -12,7 +12,7 @@ a.push([b[c]])
 			}
 			return conn.sendPoll(m.chat, `📊 *Опрос, запрошенный:* ${name}\n\n*Mensaje:* ${text.split('|')[0]}`, a, m)
 }
-handler.help = ['poll <hola|como|xd>']
+handler.help = ['poll']
 handler.tags = ['group'] 
 handler.command = ['poll', 'encuesta', 'polling'] 
 handler.group = true
