@@ -6,7 +6,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
     let user = global.db.data.users[m.sender]
     const item = items.filter(v => v in user && typeof user[v] == 'number')
     let lol = `✳️ Правильное использование команды
-*${usedPrefix + command}*  [tipo] [cantidad] [@user]
+*${usedPrefix + command}*  [тип] [количество] [@Пользователь]
 
 📌 Пример : 
 *${usedPrefix + command}* exp 65 @${m.sender.split('@')[0]}
@@ -72,7 +72,7 @@ handler.before = async m => {
     }
 }
 
-handler.help = ['transfer'].map(v => v + ' [tipo] [monto] [@tag]')
+handler.help = ['transfer'].map(v => v + ' [тип] [сумма] [@Пользователь]')
 handler.tags = ['econ']
 handler.command = ['payxp','paydi', 'transfer', 'darxp','dardi',]
 
