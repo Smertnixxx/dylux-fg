@@ -30,7 +30,7 @@ let handler = async (m, { conn, text }) => {
     throw 'Неправильный формат, только 0-9 и символ -, +, *, /, ×, ÷, π, e, (, ) что вы можете использовать'
   }
 }
-handler.help = ['cal <ecuacion>']
+handler.help = ['cal <Пример>']
 handler.tags = ['tools']
 handler.command = ['cal', 'calc', 'calcular', 'calculadora'] 
 handler.exp = 5
