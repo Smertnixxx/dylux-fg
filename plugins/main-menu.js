@@ -21,8 +21,6 @@ let tags = {
   'tools': 'ИНСТРУМЕНТЫ',
   'fun': 'ВЕСЕЛЬЕ',
   'cmd': 'БАЗА ДАННЫХ',
-  'nsfw': 'NSFW +18', 
-  'ansfw': 'NSFW ANIME',
   'owner': 'КОМАНДЫ ДЛЯ СОЗДАТЕЛЯ', 
   'advanced': 'ПРОДВИНУТЫЙ',
 }
