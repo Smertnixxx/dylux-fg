@@ -24,10 +24,10 @@ const sections = [
 ]
 
 const listMessage = {
-  text: '\nAquí tiene una lista de lo que puede activar y desactivar',
+  text: '\nВот список того, что вы можете включать и выключать',
   footer: fgig,
-  title: `≡ Lista de Opciones`,
-  buttonText: "Click Aquí",
+  title: `≡ Список опций`,
+  buttonText: "Нажмите Здесь",
   sections
 }
 
@@ -187,7 +187,6 @@ const listMessage = {
 ▢ antilink
 ▢ detect 
 ▢ document
-▢ nsfw
 ▢ onlylatinos
 └───────────── 
 ┌─⊷ *Пользователи*
@@ -207,7 +206,7 @@ const listMessage = {
 }
 
 m.reply(`
-✅ *${type}* Se *${isEnable ? 'Активировал' : 'Desactivó'}* ${isAll ? 'для этого бота' : isUser ? '' : 'для этого чата'}
+✅ *${type}* Se *${isEnable ? 'Активировал' : 'Дезактивировать'}* ${isAll ? 'для этого бота' : isUser ? '' : 'для этого чата'}
 `.trim()) 
 
 }
