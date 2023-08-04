@@ -27,7 +27,7 @@ break
 default:
  }
 }
-handler.help = ['Ваифу', 'мегумин']
+handler.help = ['Ваифу', 'Мегумин']
 handler.tags = ['nime']
 handler.command = ['ваифу', 'мегумин'] 
 handler.diamond = true
