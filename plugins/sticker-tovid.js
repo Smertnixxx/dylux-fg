@@ -20,8 +20,8 @@ let handler = async (m, { conn }) => {
     }
     await conn.sendFile(m.chat, out, 'tovid.mp4', '✅ Готово :)' , m)
 }
-handler.help = ['tovid']
+handler.help = ['Видео (Стикер)']
 handler.tags = ['sticker']
-handler.command = ['tovideo', 'tovid']
+handler.command = ['tovideo', 'видео']
 
 export default handler
