@@ -66,8 +66,8 @@ ${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.m
 m.reply(infobt)
 
 }
-handler.help = ['Инфо']
+handler.help = ['Ботинфо']
 handler.tags = ['main']
-handler.command = ['info', 'infobot', 'инфо', 'botinfo']
+handler.command = ['info', 'infobot', 'ботинфо', 'botinfo']
 
 export default handler
