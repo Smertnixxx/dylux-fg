@@ -22,9 +22,9 @@ let handler = async (m, { conn, command, args }) => {
         m.reply(msg)
     }
 }
-handler.help = ['google']
+handler.help = ['Гугл']
 handler.tags = ['tools']
-handler.command = ['google'] 
+handler.command = ['Гугл'] 
 handler.diamond = true
 
 export default handler
