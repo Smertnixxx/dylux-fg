@@ -57,8 +57,8 @@ try {
     }
 }
 
-handler.help = ['levelup']
+handler.help = ['ПоднятьУровень']
 handler.tags = ['econ']
-handler.command = ['nivel', 'lvl', 'levelup', 'level'] 
+handler.command = ['nivel', 'поднятьуровень', 'уровень', 'level'] 
 
 export default handler
