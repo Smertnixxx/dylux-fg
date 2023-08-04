@@ -3,7 +3,7 @@ let { downloadContentFromMessage } = (await import('@adiwajshing/baileys'));
 
 let handler = async (m, { conn }) => {
     if (!m.quoted) throw '✳️ Ответить на сообщение'
-    if (m.quoted.mtype !== 'viewOnceMessageV2') throw '✳️ Это не сообщение от viewOnce'
+    if (m.quoted.mtype !== 'viewOnceMessageV2') throw '✳️ Это не сообщение *Посмотреть один раз*'
     let msg = m.quoted.message
     let type = Object.keys(msg)[0]
     let media = await downloadContentFromMessage(msg[type], type == 'imageMessage' ? 'image' : 'video')
@@ -18,8 +18,8 @@ let handler = async (m, { conn }) => {
     }
 }
 
-handler.help = ['readvo']
+handler.help = ['Посмотреть']
 handler.tags = ['tools']
-handler.command = ['readviewonce', 'read', 'ver', 'readvo'] 
+handler.command = ['readviewonce', 'Посмотреть', 'ver', 'readvo'] 
 
 export default handler
