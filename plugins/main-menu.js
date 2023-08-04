@@ -18,7 +18,6 @@ let tags = {
   'tools': 'ИНСТРУМЕНТЫ',
   'fun': 'ВЕСЕЛЬЕ',
   'owner': 'КОМАНДЫ ДЛЯ СОЗДАТЕЛЯ', 
-  'advanced': 'ПРОДВИНУТЫЙ',
 }
 const defaultMenu = {
   before: `
