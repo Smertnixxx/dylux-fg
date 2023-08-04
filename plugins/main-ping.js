@@ -11,8 +11,8 @@ let handler = async (m, { conn }) => {
           m.reply(`${ssd}🟢 *Скорость* : ${latensi.toFixed(4)} _ms_`);
             });
 }
-handler.help = ['ping (Скорость ответа бота)']
+handler.help = ['Скорость']
 handler.tags = ['main']
-handler.command = ['ping', 'speed']
+handler.command = ['ping', 'скорость']
 
 export default handler
