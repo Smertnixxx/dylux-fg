@@ -63,9 +63,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
         
 ${end}`) 
 }
-handler.help = ['slot <apuesta>']
+handler.help = ['Слоты <ставка>']
 handler.tags = ['game']
-handler.command = ['slot']
+handler.command = ['слоты']
 
 export default handler
 
@@ -79,5 +79,5 @@ function msToTime(duration) {
     minutes = (minutes < 10) ? "0" + minutes : minutes
     seconds = (seconds < 10) ? "0" + seconds : seconds
 
-    return seconds + " Segundo(s)"
+    return seconds + "Секунд"
 }
