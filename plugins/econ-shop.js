@@ -17,7 +17,7 @@ let handler = async (m, { conn, command, args }) => {
 }
 handler.help = ['Купить', 'КупитьВсе']
 handler.tags = ['econ']
-handler.command = ['купить', 'купиьвсе'] 
+handler.command = ['купить', 'купитьвсе'] 
 
 handler.disabled = false
 
