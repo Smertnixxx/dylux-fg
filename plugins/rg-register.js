@@ -19,12 +19,12 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   user.registered = true
   let sn = createHash('md5').update(m.sender).digest('hex')
   m.reply(`
-┌─「 *РЕГИСТРАЦИЯ* 」─
+┌─「 *РЕГИСТРАЦИЯ* 」─◊♦►
 ▢ *Имя:* ${name}
 ▢ *Возраст* : ${age} 
 ▢ *Ваш ключ* :
 ${sn}
-└──────────────
+└──────────────◊♦►
 
  *${usedPrefix}меню* пункт главного меню
 `.trim())
