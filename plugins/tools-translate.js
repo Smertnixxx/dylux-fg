@@ -7,8 +7,8 @@ let handler = async (m, { args, usedPrefix, command }) => {
     let err = `
 📌 *Пример:*
 
-*${usedPrefix + command}* <idioma> [texto]
-*${usedPrefix + command}* es Hello World
+*${usedPrefix + command}* <язык> [текст]
+*${usedPrefix + command}* привет, Мир
 
 ≡ *Список поддерживаемых языков:* 
 
@@ -31,8 +31,8 @@ https://cloud.google.com/translate/docs/languages
     } 
 
 }
-handler.help = ['trad <leng> <text>']
+handler.help = ['Переводчик <Язык> <Текст>']
 handler.tags = ['tools']
-handler.command = ['translate', 'tl', 'trad', 'tr']
+handler.command = ['translate', 'переводчик', 'перевести', 'tr']
 
 export default handler
