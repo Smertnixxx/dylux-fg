@@ -7,6 +7,6 @@ await conn.reply(m.chat, `✅ Сеанс *tictactoe был перезапуще�
 }
 handler.help = ['Тиктак']
 handler.tags = ['game']
-handler.command = ['delttc', 'delttt', 'тиктак', 'delxo']
+handler.command = ['delttc', 'delttt', 'разтиктак', 'delxo']
 
 export default handler
