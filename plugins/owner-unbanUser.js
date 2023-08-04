@@ -11,7 +11,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     conn.reply(m.chat, `
 ✅ Разбанен
 
-───────────
+˙·٠•●◊♦►------------------------◄♦◊●•٠·˙
 @${who.split`@`[0]} Вы были разбанены :)`, m, { mentions: [who] })
 }
 handler.help = ['unban @user']
