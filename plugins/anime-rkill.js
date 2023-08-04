@@ -26,9 +26,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
    
 }
 
-handler.help = ['kill @tag']
+handler.help = ['Убить @Пользователь']
 handler.tags = ['rnime']
-handler.command = /^(kill|matar)$/i
+handler.command = ['убить']
 handler.diamond = true
 handler.group = true
 
