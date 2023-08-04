@@ -20,9 +20,9 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     global.db.data.users[m.sender].lastrob = new Date * 1
   }
 
-  handler.help = ['rob']
+  handler.help = ['Украсть']
   handler.tags = ['econ']
-  handler.command = ['robar', 'rob']
+  handler.command = ['украсть', 'красть']
   
   export default handler
   
