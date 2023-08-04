@@ -13,7 +13,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
 ˙·٠•●◊♦►------------------------◄♦◊●•٠·˙
 @${who.split`@`[0]} вы больше не сможете использовать мои команды `, m, { mentions: [who] })
-˙·٠•●◊♦►------------------------◄♦◊●•٠·˙
 }
 handler.help = ['ban @user']
 handler.tags = ['owner']
