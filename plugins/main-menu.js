@@ -21,7 +21,7 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-◄♦◊·٠•●*ULTIMATE | BOT*●•٠·◊♦►
+*◄♦◊•●ULTIMATE | BOT●•◊♦►*
  
 👋🏻 _Привет!_ *%name*
 🧿 Уровень : *%level* 
