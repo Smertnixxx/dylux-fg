@@ -14,8 +14,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         m.reply(`✳️ Ответьте на звук, который вы хотите преобразовать в голосовую заметку, с помощью :\n *${usedPrefix + command}*`)
    }
 }
-handler.help = ['toav']
+handler.help = ['Голосовое']
 handler.tags = ['fun']
-handler.command = ['toav', 'tovn'] 
+handler.command = ['toav', 'голосовое'] 
 
 export default handler
