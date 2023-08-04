@@ -11,7 +11,7 @@ let handler = async (m, { conn }) => {
 }
 handler.help = ['Кубик']
 handler.tags = ['game']
-handler.command = ['Кубик', 'dados'] 
+handler.command = ['кубик', 'dados'] 
 
 export default handler
 
