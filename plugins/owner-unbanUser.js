@@ -12,7 +12,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 ✅ Разбанен
 
 ˙·٠•●◊♦►------------------------◄♦◊●•٠·˙
-@${who.split`@`[0]} Вы были разбанены :)`, m, { mentions: [who] })
+@${who.split`@`[0]} Вы были *разбанены* :)`, m, { mentions: [who] })
 }
 handler.help = ['unban @user']
 handler.tags = ['owner']
