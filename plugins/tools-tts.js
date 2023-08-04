@@ -2,7 +2,7 @@ import gtts from 'node-gtts'
 import { readFileSync, unlinkSync } from 'fs'
 import { join } from 'path'
 
-const defaultLang = 'us-us'
+const defaultLang = 'en-en'
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 
   let lang = args[0]
