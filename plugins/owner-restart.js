@@ -7,7 +7,7 @@ let handler = async (m, { conn, isROwner, text }) => {
   } else throw 'eh'
 }
 
-handler.help = ['restart']
+handler.help = ['Рестарт']
 handler.tags = ['owner']
 handler.command = ['restart', 'Перезагрузить', 'Рестарт','reiniciar'] 
 
