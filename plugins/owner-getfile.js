@@ -23,9 +23,9 @@ ${usedPrefix + command} main-menu
  ${usedPrefix + command} main-menu 
       
       ≡ *Список плагинов*
-┌─⊷
+˙·٠•●◊♦►------------------------◄♦◊●•٠·˙
  ${pluginNames.map(name => `▢ ${name}`).join('\n')}
-└───────────
+˙·٠•●◊♦►------------------------◄♦◊●•٠·˙
     `);
   }
 
@@ -46,9 +46,9 @@ ${usedPrefix + command} main-menu
     m.reply('❎ Ошибка')
   }
 };
-handler.help = ['getplugin']
+handler.help = ['Плагин']
 handler.tags = ['owner']
-handler.command = ['getplugin']
+handler.command = ['плагин']
 handler.rowner = true
 
 export default handler
