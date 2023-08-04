@@ -19,7 +19,7 @@ conn.reply(m.chat, `
 `, m, { mentions: [who] })
 
 }
-handler.help = ['addprem <@tag>']
+handler.help = ['Премиум @Пользователь']
 handler.tags = ['owner']
 handler.command = ['addprem', 'премиум'] 
 
