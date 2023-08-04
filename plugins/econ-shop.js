@@ -15,9 +15,9 @@ let handler = async (m, { conn, command, args }) => {
 └──────────────`, m)
   } else conn.reply(m.chat, `❎ Извини, тебе не хватает *XP* чтобы купить *${count}* Алмазы💎\n\n Вы можете получить *XP* используя команды из *меню игры и экономика*`, m)
 }
-handler.help = ['buy', 'buyall']
+handler.help = ['Купить', 'КупитьВсе']
 handler.tags = ['econ']
-handler.command = ['buy', 'buyall'] 
+handler.command = ['купить', 'купиьвсе'] 
 
 handler.disabled = false
 
