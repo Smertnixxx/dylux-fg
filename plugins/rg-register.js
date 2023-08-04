@@ -26,7 +26,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 ${sn}
 └──────────────
 
- *${usedPrefix}help* пункт главного меню
+ *${usedPrefix}меню* пункт главного меню
 `.trim())
 }
 handler.help = ['Регистрация'].map(v => v + ' <Имя.Лет>')
