@@ -5,8 +5,8 @@ let teks = `▢ *ПРЕМИУМ ПОЛЬЗОВАТЕЛИ*\n───────
 m.reply(teks, null, {mentions: conn.parseMention(teks)})
 
 }
-handler.help = ['listprem (премиум пользователи']
+handler.help = ['Премлист']
 handler.tags = ['main']
-handler.command = ['listprem', 'premlist', 'премиум пользователи', 'listpremium'] 
+handler.command = ['listprem', 'premlist', 'премлист', 'listpremium'] 
 
 export default handler
