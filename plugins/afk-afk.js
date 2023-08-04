@@ -7,13 +7,13 @@ let handler = async (m, { text, conn }) => {
     m.reply(`
   😴 *AFK* 
 Теперь эти афк, пока ты не отправишь сообщение
-▢ *Пользователь:* ${conn.getName(m.sender)} 
-▢ *Причина:* ${text ? text : ''}
+🧑‍🎓 *Пользователь:* ${conn.getName(m.sender)} 
+💬 *Причина:* ${text ? text : ''}
   `)
 }
-handler.help = ['afk <Причина>']
+handler.help = ['АФК <Причина>']
 handler.tags = ['fun']
-handler.command = ['afk']
+handler.command = ['афк']
 handler.group = true
 
 export default handler
