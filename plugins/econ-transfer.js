@@ -72,9 +72,9 @@ handler.before = async m => {
     }
 }
 
-handler.help = ['transfer'].map(v => v + ' [тип] [сумма] [@Пользователь]')
+handler.help = ['Банк'].map(v => v + ' [тип] [сумма] [@Пользователь]')
 handler.tags = ['econ']
-handler.command = ['payxp','paydi', 'transfer', 'darxp','dardi',]
+handler.command = ['payxp','банк', 'transfer', 'darxp','dardi',]
 
 handler.disabled = false
 
