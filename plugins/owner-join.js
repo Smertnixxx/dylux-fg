@@ -57,9 +57,9 @@ ${usedPrefix}help
       throw `✳️ Извините, бот не может присоединиться к группам`
       }
 }
-handler.help = ['join <chat.whatsapp.com> <dias>']
+handler.help = ['Зайти <Ссылка на группу> <Дней>']
 handler.tags = ['owner']
-handler.command = ['join', 'invite'] 
+handler.command = ['join', 'зайти'] 
 
 //handler.owner = true
 
