@@ -9,10 +9,10 @@ let handler = async function (m, { conn, args, usedPrefix}) {
   user.registered = false
   m.reply(`✅ Запись удалена`)
 }
-handler.help = ['Отвязать учетную запись'] 
+handler.help = ['Отвязать'] 
 handler.tags = ['rg']
 
-handler.command = ['Делрег','hjj','unreg'] 
+handler.command = ['отвязать','hjj','unreg'] 
 handler.register = true
 
 export default handler
