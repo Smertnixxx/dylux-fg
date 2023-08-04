@@ -15,9 +15,9 @@ let handler = async (m, {conn, isPrems }) => {
 🆙 *XP* : +${isPrems ? prem : free}`)
   global.db.data.users[m.sender].lastclaim = new Date * 1
 }
-handler.help = ['daily']
+handler.help = ['Награда']
 handler.tags = ['econ']
-handler.command = ['daily', 'claim'] 
+handler.command = ['награда', 'claim'] 
 
 export default handler
 
