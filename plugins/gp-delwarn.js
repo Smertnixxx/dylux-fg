@@ -18,7 +18,7 @@ let handler = async (m, { conn, args, groupMetadata}) => {
         }
 
 }
-handler.help = ['разпред @Пользователь']
+handler.help = ['Разпред @Пользователь']
 handler.tags = ['group']
 handler.command = ['delwarn', 'разпред'] 
 handler.group = true
