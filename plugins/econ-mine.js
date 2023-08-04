@@ -4,15 +4,15 @@ let handler = async (m, { conn }) => {
 
   let hasil = Math.floor(Math.random() * 5000)
   let time = global.db.data.users[m.sender].lastmiming + 14400000
-  if (new Date - global.db.data.users[m.sender].lastmiming < 14400000) throw `⏳ Ожидание_ *${msToTime(time - new Date())}* _чтобы вернуться в шахту_`
+  if (new Date - global.db.data.users[m.sender].lastmiming < 14400000) throw `⏳ Ожидание_ *${msToTime(time - new Date())}* _чтобы вернуться на работу_`
   global.db.data.users[m.sender].exp += hasil
   m.reply(`
 🎉 Отлично! вы заработали *${hasil} XP*`)
   global.db.data.users[m.sender].lastmiming = new Date * 1
 }
-handler.help = ['mine']
+handler.help = ['Работа']
 handler.tags = ['econ']
-handler.command = ['minar', 'miming', 'mine'] 
+handler.command = ['Работа', 'miming', 'mine'] 
 
 export default handler
 
