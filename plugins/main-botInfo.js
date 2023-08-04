@@ -52,7 +52,7 @@ let infobt = `
 ▢ *${chats.length}* Всего чатов
 
 *≡ OWNER*
-  *Smertnix*
+  *WILDOVSKY*
 ▢ VK: https://vk.com/wildmoder
 ▢ WhatsApp: +7 931 954-72-47
 
