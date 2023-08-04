@@ -27,9 +27,9 @@ break
 default:
  }
 }
-handler.help = ['waifu', 'neko', 'megumin', 'loli']
+handler.help = ['Ваифу', 'мегумин']
 handler.tags = ['nime']
-handler.command = ['waifu', 'neko', 'megumin', 'loli'] 
+handler.command = ['ваифу', 'мегумин'] 
 handler.diamond = true
 
 export default handler
