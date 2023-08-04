@@ -144,14 +144,14 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
       ['⌬ Grupos', `${_p}gpdylux`]
     ],m, rpl)*/
   
-    m.react('👿') 
+    m.react('👑') 
     
   } catch (e) {
     conn.reply(m.chat, '❎ Извините, в меню есть ошибка', m)
     throw e
   }
 }
-handler.help = ['help (Меню бота)']
+handler.help = ['Меню']
 handler.tags = ['main']
 handler.command = ['menu', 'help', 'меню', 'menú'] 
 handler.register = false
