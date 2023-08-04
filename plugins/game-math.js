@@ -29,9 +29,9 @@ _📌Пример : ${usedPrefix+command} normal_
         }, math.time)
     ]
 }
-handler.help = ['Mates <modo>']
+handler.help = ['Матис <Мод>']
 handler.tags = ['game']
-handler.command = ['mates', 'mate', 'matemáticas', 'math'] 
+handler.command = ['mates', 'матис', 'matemáticas', 'math'] 
 
 
 let modes = {
