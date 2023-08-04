@@ -41,9 +41,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     else throw 'Преобразование не удалось, сначала попробуйте отправить *изображение/видео / gif*, а затем ответьте командой'
   }
 }
-handler.help = ['sticker']
+handler.help = ['Стикер (Изображение)']
 handler.tags = ['sticker']
-handler.command = ['s', 'sticker'] 
+handler.command = ['стикер', 'sticker'] 
 
 export default handler
 
