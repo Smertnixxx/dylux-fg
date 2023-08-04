@@ -10,8 +10,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     let out = await webp2png(media).catch(_ => null) || Buffer.alloc(0)
     await conn.sendFile(m.chat, out, 'out.png', '*✅ Вот, держи*', m)
 }
-handler.help = ['toimg <Стикер>']
+handler.help = ['Изображение <Стикер>']
 handler.tags = ['sticker']
-handler.command = ['toimg', 'jpg', 'aimg'] 
+handler.command = ['toimg', 'jpg', 'изображение'] 
 
 export default handler
