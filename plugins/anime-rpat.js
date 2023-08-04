@@ -24,9 +24,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
    
 }
 
-handler.help = ['pat @tag']
+handler.help = ['Погладить @Пользователь']
 handler.tags = ['rnime']
-handler.command = /^(acariciar|pat)$/i
+handler.command = ['погладить']
 handler.diamond = true
 handler.group = true
 
