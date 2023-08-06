@@ -19,7 +19,7 @@ let handler = async (m, { conn, text }) => {
 ┏━━━━━━━━━━━━━━━━┓
 ║➤  *Текущий:* ${xp}
 ┗━━━━━━━━━━━━━━━━┛`)
- conn.fakeReply(m.chat, ` ✅Получил \n\n *+${xp} XP🌐*`, who, m.text)
+ conn.fakeReply(m.chat, ` ✅ *Получил* \n\n *+${xp} XP🌐*`, who, m.text)
 }
 
 handler.help = ['addxp <@user>']
