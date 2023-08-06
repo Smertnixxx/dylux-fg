@@ -22,9 +22,9 @@ let handler = async (m, { conn, text }) => {
  conn.fakeReply(m.chat, ` ✅ *Получил* \n\n *+${xp} XP🌐*`, who, m.text)
 }
 
-handler.help = ['addxp <@user>']
+handler.help = ['ВыдатьУровень <@Пользователь>']
 handler.tags = ['owner']
-handler.command = ['addxp'] 
+handler.command = ['выдатьуровень', 'выдатьопыт'] 
 handler.rowner = true
 
 export default handler
