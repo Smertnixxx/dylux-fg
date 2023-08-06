@@ -7,7 +7,7 @@ let handler = async (m, { conn, text, participants, isAdmin, isOwner, groupMetad
 
 handler.help = ['Версия']
 handler.tags = ['group']
-handler.command = ['tagall', 'версия
+handler.command = ['tagall', 'версия']
 handler.admin = true
 handler.group = true
 
