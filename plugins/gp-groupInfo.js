@@ -12,18 +12,18 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
    ║➤ ${groupMetadata.id}
 ┣ *🔖Название* : 
 ║➤ ${groupMetadata.subject}
-▢ *👥Участники* :
+┣ *👥Участники* :
 ║➤ ${participants.length}
 ┣ *👑Владелец группы:*
 ║➤ @${owner.split('@')[0]}
 ┣ *🕵🏻‍♂️Админы:*
  ${listAdmin}
-┣ *🪢 Групповые настройки:*
-• ${isBanned ? '✅' : '❎'} Забаненный
-• ${welcome ? '✅' : '❎'} Приветствие
-• ${detect ? '✅' : '❎'} Детектор
-• ${del ? '❎' : '✅'} Анти-Удаление
-• ${antiLink ? '✅' : '❎'} Анти-Сыллка WhatsApp 
+║➤ *🪢 Групповые настройки:*
+┣ ${isBanned ? '✅' : '❎'} Забаненный
+┣ ${welcome ? '✅' : '❎'} Приветствие
+┣ ${detect ? '✅' : '❎'} Детектор
+┣ ${del ? '❎' : '✅'} Анти-Удаление
+┣ ${antiLink ? '✅' : '❎'} Анти-Сыллка WhatsApp 
 
 *║➤  📬 Настройка сообщений:*
 ┣ Приветствие: ${sWelcome}
