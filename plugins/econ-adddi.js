@@ -15,15 +15,15 @@ let handler = async (m, { conn, text }) => {
     let users = global.db.data.users
    users[who].diamond += dmt
 
-    await m.reply(`≡ *💎 ВСТАВКА*
-┌──────────────
-▢ *Total:* ${dmt}
-└──────────────`)
-   conn.fakeReply(m.chat, `▢ Получил \n\n *+${dmt}* Алмазы`, who, m.text)
+    await m.reply(`┣ ඬ⃟  *✅ Успешно*
+┏━━━━━━━━━━━━━━━━┓
+║➤ *Текущий:* ${dmt} 💎
+┗━━━━━━━━━━━━━━━━┛`)
+   conn.fakeReply(m.chat, `✅ Получил \n\n *+${dmt}* Алмазов💎`, who, m.text)
 }
 
-handler.help = ['adddi <@user>']
-handler.tags = ['econ']
+handler.help = ['ВыдатьАлмазы <@Пользователь>']
+handler.tags = ['owner']
 handler.command = ['adddi'] 
 handler.rowner = true
 
