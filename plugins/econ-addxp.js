@@ -4,10 +4,10 @@ let handler = async (m, { conn, text }) => {
   let who
   if (m.isGroup) who = m.mentionedJid[0]
   else who = m.chat
-  if (!who) throw '✳️ Помечает пользователя'
+  if (!who) throw '✳❗ Отметитьте пользователя'
   let txt = text.replace('@' + who.split`@`[0], '').trim()
   if (!txt) throw '✳️ Введите количество *XP*, которое вы хотите добавить'
-  if (isNaN(txt)) throw ' 🔢 sólo números'
+  if (isNaN(txt)) throw ' 🔢 только цифры'
   let xp = parseInt(txt)
   let exp = xp
   
@@ -16,14 +16,14 @@ let handler = async (m, { conn, text }) => {
   users[who].exp += xp
 
   await m.reply(`≡ *ДОБАВЛЕН XP*
-┌──────────────
-▢  *Текущий:* ${xp}
-└──────────────`)
- conn.fakeReply(m.chat, `▢ Recibiste \n\n *+${xp} XP*`, who, m.text)
+┏━━━━━━━━━━━━━━━━┓
+║➤  *Текущий:* ${xp}
+┗━━━━━━━━━━━━━━━━┛`)
+ conn.fakeReply(m.chat, ` Получил \n\n *+${xp} XP*`, who, m.text)
 }
 
 handler.help = ['addxp <@user>']
-handler.tags = ['econ']
+handler.tags = ['owner']
 handler.command = ['addxp'] 
 handler.rowner = true
 
