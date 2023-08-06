@@ -33,7 +33,7 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
 ┣ Деграданты: ${sDemote}
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡║
 ║➤ *📌Описание* :
-   ┣ ${groupMetadata.desc?.toString() || 'неизвестный'}
+┣ ${groupMetadata.desc?.toString() || 'Описание отсутствует'}
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡║
 `.trim()
     conn.sendFile(m.chat, pp, 'pp.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
