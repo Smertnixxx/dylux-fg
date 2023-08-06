@@ -12,9 +12,9 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
     conn.reply(m.chat, `✅ Премиум удален \n\n@${who.split('@')[0]} Ты больше не премиум`, m, { mentions: [who] })
     
 }
-handler.help = ['delprem @user']
+handler.help = ['УдалитьПремиум @user']
 handler.tags = ['owner']
-handler.command = ['delprem', 'delpremium'] 
+handler.command = ['удалитьпремиум', 'забратьпремиум'] 
 
 handler.group = true
 handler.rowner = true
