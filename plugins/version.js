@@ -1,7 +1,7 @@
 let handler = async (m, { conn, text, participants, isAdmin, isOwner, groupMetadata }) => {
     let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
-   m.reply(`🖼️ Группа : привет! `\n', null, {
-        mentions: users
+ m.reply(`${ssd}🟢 *Скорость* : ${latensi.toFixed(4)} _ms_`);
+    
     })
 }
 
