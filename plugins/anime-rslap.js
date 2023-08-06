@@ -24,7 +24,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
    
 }
 
-handler.help = ['Пощёчина @Пользователь']
+handler.help = ['Подщёчина @Пользователь']
 handler.tags = ['rnime']
 handler.command = ['подщечина', 'подщёчина']
 handler.diamond = true
