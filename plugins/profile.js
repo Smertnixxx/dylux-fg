@@ -17,10 +17,10 @@ let prem = global.prems.includes(who.split`@`[0])
 let sn = createHash('md5').update(who).digest('hex')
 
 let str = `
-┌───「 *Профиль* 」
+┏━━━「 *Профиль* 」
 ║➤ *🔖 Номер:* 
-   ║➤ ${username} ${registered ? '\n   • ' + name + ' ': ''}
-   ║➤ @${who.replace(/@.+/, '')}
+║➤ ${username} ${registered ? '\n   ║➤ ' + name + ' ': ''}
+║➤ @${who.replace(/@.+/, '')}
 ║➤ *📱 Номер:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 ║➤ *🔗 Ссылка:* wa.me/${who.split`@`[0]}${registered ? '\n *🎈Возраст*: ' + age + ' Лет' : ''}
 ║➤ *⚠️ Предупреждения:* ${warn}/${maxwarn}
@@ -30,7 +30,7 @@ let str = `
 ║➤ *🏆 Ранг:* ${role}
 ║➤ *📇 Зарегистрированный:* ${registered ? 'Да': 'Нет'}
 ║➤ *⭐ Премиум* : ${prem ? 'Есть' : 'Нету'}
-└──────────────`
+┗━━━━━━━━━━━━━`
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
     m.react(done)
 
