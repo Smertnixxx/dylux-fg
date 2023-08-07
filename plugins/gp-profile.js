@@ -32,11 +32,11 @@ let str = `
 ║➤ *⭐ Премиум* : ${prem ? 'Есть' : 'Нету'}
 ┗━━━━━━━━━━━━━━━━┛`
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
-    m.react(done)
+    m.react(🏷️)
 
 }
 handler.help = ['Профиль']
-handler.tags = ['nime']
+handler.tags = ['group']
 handler.command = ['profile', 'профиль'] 
 
 export default handler
