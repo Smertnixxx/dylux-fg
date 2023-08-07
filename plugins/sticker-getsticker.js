@@ -3,7 +3,7 @@ import fg from 'api-dylux'
 import fetch from 'node-fetch'
 import { sticker } from '../lib/sticker.js'
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-    if (!args[0]) throw `✳️ введите то, что вы хотите найти \n\n📌*Пример:*\n${usedPrefix + command} homero`
+    if (!args[0]) throw `[❓] введите то, что вы хотите найти \n\n📌*Пример:*\n${usedPrefix + command} Котики`
     
     //Resultados de https://getstickerpack.com/
     try {
@@ -13,9 +13,9 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     m.reply(`
 ✅ Результат
 
-▢ *Название:* ${json.title}
-▢ *Текущий стикер:* ${json.sticker_url.length}
-▢ *Расчетное время доставки:* _*${json.sticker_url.length * 2} s*_`)
+🏷️ *Название:* ${json.title}
+📑 *Текущий стикер:* ${json.sticker_url.length}
+⌛ *Расчетное время доставки:* _*${json.sticker_url.length * 2} s*_`)
     for (let i of json.sticker_url) {
         const stiker = await sticker(false, i, global.packname, global.author)
         await conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
@@ -25,9 +25,9 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 	m.reply(`❇️ Ошибка: попробуйте другой`)
 	} 
 }
-handler.help = ['getsticker']
+handler.help = ['Стикерпак']
 handler.tags = ['sticker']
-handler.command = ['getsticker', 'getstick', 'stickersearch', 'sticksearch'] 
+handler.command = ['getsticker', 'стикерпак', 'stickersearch', 'sticksearch'] 
 handler.diamond = 3
 
 export default handler
