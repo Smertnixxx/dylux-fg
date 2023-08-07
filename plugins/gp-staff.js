@@ -7,14 +7,14 @@ const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadm
 let text = `
 ≡ *Персонал группы* _${groupMetadata.subject}_
 
-┌─⊷ *Админы*
-▢ ${listAdmin}
-└───────────
+┏━━ *Админы* ━━┓
+🫅 ${listAdmin}
+┗━━━━━━━━━━━━━━━━┛
 `.trim()
 conn.sendFile(m.chat, pp, 'staff.png', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
 handler.help = ['Персонал']
 handler.tags = ['group']
-handler.command = ['staff', 'admins', 'админы'] 
+handler.command = ['staff', 'админы', 'персонал'] 
 handler.group = true
 export default handler
