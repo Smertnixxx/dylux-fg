@@ -17,26 +17,26 @@ let prem = global.prems.includes(who.split`@`[0])
 let sn = createHash('md5').update(who).digest('hex')
 
 let str = `
-┌───「 *ПРОФИЛЬ* 」
-▢ *🔖 Имена:* 
-   • ${username} ${registered ? '\n   • ' + name + ' ': ''}
-   • @${who.replace(/@.+/, '')}
-▢ *📱 Номер:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-▢ *🔗 Ссылка:* wa.me/${who.split`@`[0]}${registered ? '\n▢ *🎈Возраст*: ' + age + ' Лет' : ''}
-▢ *⚠️ Предупреждений:* ${warn}/${maxwarn}
-▢ *💎 Алмазов :* ${diamond}
-▢ *🆙 Уровень : ${level}
-▢ *⬆️ XP* : Текущий ${exp} (${user.exp - min} / ${xp})\n${math <= 0 ? `}
-▢ *🏆 Ранг:* ${role}
-▢ *📇 Зарегистрированный :* ${registered ? 'Да': 'Нет'}
-▢ *⭐ Премиум* : ${prem ? 'Есть' : 'Нету'}
-└──────────────`
+┏━━━「 *ПРОФИЛЬ* 」
+║➤ *🔖 Имена:* 
+║➤ ${username} ${registered ? '\n    ' + name + ' ': ''}
+║➤ @${who.replace(/@.+/, '')}
+║➤ *📱 Номер:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
+║➤ *🔗 Ссылка:* wa.me/${who.split`@`[0]}${registered ? '\n *🎈Возраст*: ' + age + ' Лет' : ''}
+║➤ *⚠️ Предупреждений:* ${warn}/${maxwarn}
+║➤ *💎 Алмазов :* ${diamond}
+║➤ *🆙 Уровень : ${level}
+║➤ *⬆️ XP* : Текущий ${exp} (${user.exp - min} / ${xp})\n${math <= 0 ? `}
+║➤ *🏆 Ранг:* ${role}
+║➤ *📇 Зарегистрированный :* ${registered ? 'Да': 'Нет'}
+║➤ *⭐ Премиум* : ${prem ? 'Есть' : 'Нету'}
+┗━━━━━━━━━━━━━━━━┛`
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
     m.react(done)
 
 }
-handler.help = ['perfil']
+handler.help = ['Профиль']
 handler.tags = ['group']
-handler.command = ['profile', 'perfil'] 
+handler.command = ['профиль'] 
 
 export default handler
