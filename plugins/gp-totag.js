@@ -7,7 +7,7 @@ let handler = async (m, { conn, text, participants}) => {
 }
 
 handler.help = ['Повторить']
-handler.tags = ['admin']
+handler.tags = ['nime']
 handler.command = ['повторить']
 
 handler.admin = true
