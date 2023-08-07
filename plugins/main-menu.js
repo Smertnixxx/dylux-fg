@@ -6,6 +6,7 @@ import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
   'main': 'ИНФОРМАЦИЯ',
+  'admin': 'ДЛЯ АДМИНОВ',
   'game': 'ИГРЫ',
   'econ': 'УРОВЕНЬ И ЭКОНОМИКА',
   'rg': 'РЕГИСТРАЦИЯ',
@@ -13,7 +14,6 @@ let tags = {
   'img': 'КАРТИНКИ',
   'group': 'ГРУППА',
   'nable': 'ВКЛЮЧИТЬ/ВЫКЛЮЧИТЬ БОТА', 
-  'admin': 'ДЛЯ АДМИНОВ',
   'rnime': 'АНИМЕ РЕАКЦИЯ',
   'tools': 'ИНСТРУМЕНТЫ',
   'fun': 'ВЕСЕЛЬЕ',
