@@ -12,7 +12,7 @@ m.reply(`🛡️ Пользователь был исключен из груп�
 }
 
 handler.help = ['Кик @Пользователь']
-handler.tags = ['group']
+handler.tags = ['admin']
 handler.command = ['kick', 'кик', 'бан'] 
 handler.admin = true
 handler.group = true
