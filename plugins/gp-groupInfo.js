@@ -33,7 +33,7 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
     conn.sendFile(m.chat, pp, 'pp.jpg', text, m, false, { mentions: [...groupAdmins.map(v => v.id), owner] })
 }
 
-handler.help = ['Инфогп']
+handler.help = ['Инфогруппы']
 handler.tags = ['group']
 handler.command = ['infogrupo', 'инфогп', 'infogp'] 
 handler.group = true
