@@ -4,7 +4,7 @@ let handler = async (m, { conn }) => {
   m.reply('✅ Групповая ссылка была успешно сброшена\n\n📌 Новая ссылка:\nhttps://chat.whatsapp.com/' + res)
 }
 handler.help = ['СброситьСсылку']
-handler.tags = ['admin']
+handler.tags = ['nime']
 handler.command = ['revoke', 'resetlink', 'сброситьссылку'] 
 handler.group = true
 handler.admin = true
