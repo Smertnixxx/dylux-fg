@@ -36,7 +36,7 @@ let str = `
 
 }
 handler.help = ['Профиль']
-handler.tags = ['group']
-handler.command = ['profile', 'профиль'] 
+handler.tags = ['owner']
+handler.command = ['профиль'] 
 
 export default handler
