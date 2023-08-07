@@ -44,17 +44,17 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 let infobt = `
 ≡ *Информация о боте*
   
-*Группы*
-▢ *${groupsIn.length}* Групповые чаты
-▢ *${groupsIn.length}* Соединенные чаты
-▢ *${groupsIn.length - groupsIn.length}* Заброшенные группы
-▢ *${chats.length - groupsIn.length}* Личные чаты
-▢ *${chats.length}* Всего чатов
+┏━━ *Группы* ━━┓
+┣ *${groupsIn.length}* Групповые чаты
+┣ *${groupsIn.length}* Соединенные чаты
+┣ *${groupsIn.length - groupsIn.length}* Заброшенные группы
+┣ *${chats.length - groupsIn.length}* Личные чаты
+┣ *${chats.length}* Всего чатов
+┗━━━━━━━━━━━━━━━━┛
 
-*≡ OWNER*
-  *WILDOVSKY*
-▢ VK: https://vk.com/wildmoder
+┏━━ *OWNER* ━━┓
 ▢ WhatsApp: +7 931 954-72-47
+┗━━━━━━━━━━━━━━━━┛
 
  *≡ S E R V E R*
 *🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
