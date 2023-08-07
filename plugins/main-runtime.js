@@ -10,7 +10,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       }) * 1000
     }
     let muptime = clockString(_muptime)
-   m.reply(`🏮 *Активный бот во время*  \n\n${muptime}`) 
+   m.reply(`🏮 *Бот активен уже*  \n\n${muptime}`) 
 }
 handler.help = ['Активность']
 handler.tags = ['main']
