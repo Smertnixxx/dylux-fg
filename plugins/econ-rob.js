@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     let who
     if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false
     else who = m.chat
-    if (!who) throw `✳️ Пометьте кого-нибудь, чтобы украсть`
+    if (!who) throw `[❗] Пометьте кого-нибудь, чтобы украсть`
     if (!(who in global.db.data.users)) throw `✳️ Пользователя нет в моей базе данных`
     let users = global.db.data.users[who]
     let rob = Math.floor(Math.random() * ro)
