@@ -32,8 +32,8 @@ let str = `
 ║➤ *⭐ Премиум* : ${prem ? 'Есть' : 'Нету'}
 ┗━━━━━━━━━━━━━━━━┛`
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
-    m.react(🏷️)
-
+    m.react(done)
+    
 }
 handler.help = ['Профиль']
 handler.tags = ['owner']
