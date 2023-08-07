@@ -1,12 +1,12 @@
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 let prem = global.prems.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid) 
-let teks = `▢ *ПРЕМИУМ ПОЛЬЗОВАТЕЛИ*\n─────────────\n` + prem.map(v => '- @' + v.replace(/@.+/, '')).join`\n`
+let teks = `🫅 *ПРЕМИУМ ПОЛЬЗОВАТЕЛИ*\n─────────────\n` + prem.map(v => '- @' + v.replace(/@.+/, '')).join`\n`
 m.reply(teks, null, {mentions: conn.parseMention(teks)})
 
 }
-handler.help = ['Премлист']
+handler.help = ['ПремиумЛист']
 handler.tags = ['main']
-handler.command = ['listprem', 'premlist', 'премлист', 'listpremium'] 
+handler.command = ['listprem', 'premlist', 'премиумлист', 'listpremium'] 
 
 export default handler
