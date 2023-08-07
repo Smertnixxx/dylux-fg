@@ -32,7 +32,7 @@ let handler = async (m, { conn, text, args, groupMetadata, usedPrefix, command }
         }
 }
 handler.help = ['Пред @Пользователь']
-handler.tags = ['admin']
+handler.tags = ['nime']
 handler.command = ['пред', 'варн'] 
 handler.group = true
 handler.admin = true
