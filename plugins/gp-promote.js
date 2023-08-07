@@ -22,7 +22,7 @@ conn.groupParticipantsUpdate(m.chat, [user], 'promote')
 m.reply(`👑 *Участник* повышен до *Администратор*`)
 }}
 handler.help = ['Повысить']
-handler.tags = ['admin']
+handler.tags = ['nime']
 handler.command = ['promote', 'повысить'] 
 handler.group = true
 handler.admin = true
