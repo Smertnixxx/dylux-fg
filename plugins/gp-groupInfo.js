@@ -35,7 +35,7 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
 
 handler.help = ['Инфогруппы']
 handler.tags = ['group']
-handler.command = ['infogrupo', 'инфогп', 'infogp'] 
+handler.command = ['infogrupo', 'инфогруппы', 'infogp'] 
 handler.group = true
 
 export default handler
