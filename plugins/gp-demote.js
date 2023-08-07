@@ -25,7 +25,7 @@ m.reply(`✅ Пользователь понижен до *Участник*`)
 
 }
 handler.help = ['Понизить (@Пользователь)']
-handler.tags = ['group']
+handler.tags = ['admin']
 handler.command = ['demote', 'понизить'] 
 handler.group = true
 handler.admin = true
