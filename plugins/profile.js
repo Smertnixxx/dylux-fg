@@ -19,7 +19,7 @@ let sn = createHash('md5').update(who).digest('hex')
 let str = `
 ┏━━━「 *Профиль* 」
 ║➤ *🔖 Номер:* 
-║➤ ${username} ${registered ? '\n   ║➤ ' + name + ' ': ''}
+║➤ ${username} ${registered ? '\n ║➤ ' + name + ' ': ''}
 ║➤ @${who.replace(/@.+/, '')}
 ║➤ *📱 Номер:* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
 ║➤ *🔗 Ссылка:* wa.me/${who.split`@`[0]}${registered ? '\n *🎈Возраст*: ' + age + ' Лет' : ''}
