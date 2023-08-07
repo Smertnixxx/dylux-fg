@@ -19,7 +19,6 @@ let str = `*🏷️Имя:* ${username} ${registered ? '(' + name + ') ': ''}
 *📇Зарегистрированный:* ${registered ? 'Да': 'Нет'}
 *⭐Премиум:* ${premiumTime > 0 ? 'Si' : (isPrems ? 'Да' : 'Нет') || ''}
 ${sn}`
-conn.sendMessage(m.chat, { image: { url: pp }, caption: str }, { quoted: m })
 //conn.sendButton(m.chat, str, author, pp, [['𝙼𝙴𝙽𝚄 𝙿𝚁𝙸𝙽𝙲𝙸𝙿𝙰𝙻', '/menu']], m)
 }}
 handler.help = ['Профиль [@Пользователь]']
