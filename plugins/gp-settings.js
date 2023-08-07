@@ -12,7 +12,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     await conn.groupSettingUpdate(m.chat, isClose)
 }
 handler.help = ['Группа *открыть/закрыть*']
-handler.tags = ['group']
+handler.tags = ['admin']
 handler.command = ['group', 'группа'] 
 handler.admin = true
 handler.botAdmin = true
