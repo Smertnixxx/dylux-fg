@@ -6,6 +6,7 @@ import { xpRange } from '../lib/levelling.js'
 //import { plugins } from '../lib/plugins.js'
 let tags = {
   'main': 'ИНФОРМАЦИЯ',
+  'nsfw': 'ВАЖНОЕ',
   'nime': 'ДЛЯ АДМИНОВ',
   'group': 'ДЛЯ УЧАСТНИКОВ',
   'game': 'ИГРЫ',
