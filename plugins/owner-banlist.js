@@ -6,8 +6,9 @@ let handler = async (m, { conn, usedPrefix }) => {
     
     m.reply(`
 ≡ *ЗАБЛОКИРОВАННЫЕ ПОЛЬЗОВАТЕЛИ*
-
-▢ На данный момент : *${users.length}* 
+┏━━━━━━━━━━━━━━━━◊♦►
+┣ На данный момент : *${users.length}* 
+┗━━━━━━━━━━━━━━━━◊♦►
 
 ${users ? '\n' + users.map(([jid], i) => `
 ${i + 1}. ${conn.getName(jid) == undefined ? 'Desconocido' : conn.getName(jid)}
@@ -15,8 +16,8 @@ ${i + 1}. ${conn.getName(jid) == undefined ? 'Desconocido' : conn.getName(jid)}
 `.trim()).join('\n') : ''}
 `.trim())
 }
-handler.help = ['listban']
+handler.help = ['ЗабаненыеПользователи']
 handler.tags = ['owner']
-handler.command = ['banlist', 'listban'] 
+handler.command = ['забаненыепользователи', 'listban'] 
 
 export default handler
