@@ -482,7 +482,7 @@ export async function participantsUpdate({ id, participants, action }) {
                         ppgp = await this.profilePictureUrl(id, 'image')
                         } finally {
                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Добро Пожаловать, @user').replace('@group', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'Неизвестный') :
-                            (chat.sBye || this.bye || conn.bye || 'Пока!, @user')).replace('@user', '@' + user.split('@')[0])
+                            (chat.sBye || this.bye || conn.bye || 'Покинул(а) Группу😓, @user')).replace('@user', '@' + user.split('@')[0])
                          
                             let wel = API('fgmods', '/api/welcome', {
                                 username: await this.getName(user),
@@ -501,7 +501,7 @@ export async function participantsUpdate({ id, participants, action }) {
                                 profile: pp,
                                 background: 'https://i.imgur.com/klTSO3d.jpg'
                             }, 'apikey')
-                       this.sendFile(id, action === 'add' ? wel : lea, 'pp.jpg', text, null, false, { mentions: [user] })
+                       this.sendFile(id, action === 'add' ? wel : lea, text, null, false, { mentions: [user] })
                         /*this.sendButton(id, text, fgig, action === 'add' ? wel : lea, [
                              [(action == 'add' ? '⦙☰ MENU' : 'BYE'), (action == 'add' ? '/help' : 'khajs')], 
                              [(action == 'add' ? '⏍ INFO' : 'ッ'), (action == 'add' ? '/info' : ' ')] ], null, {mentions: [user]})
