@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     let teks = `✅ Были установлены дни истечения срока действия для \n*${await conn.getName(who)}* \n\n*На:* ${args[0]} День\n\n*Обратный отсчет :* ${msToDate(global.db.data.chats[who].expired - now)}`
     conn.reply(m.chat, teks, m)
 }
-handler.help = ['expired <días>']
+handler.help = ['expired <Дней>']
 handler.tags = ['owner']
 handler.command = /^(expired|addexpired)$/i
 handler.rowner = true
