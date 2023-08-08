@@ -10,12 +10,12 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     var now = new Date() * 1
     if (now < global.db.data.chats[who].expired) global.db.data.chats[who].expired += nDays
     else global.db.data.chats[who].expired = now + nDays
-    let teks = `✅ Были установлены дни истечения срока действия для \n*${await conn.getName(who)}* \n\n*В течение:* ${args[0]} Дней\n\n*Обратный отсчет :* ${msToDate(global.db.data.chats[who].expired - now)}`
+    let teks = `✅ Были установлены дни истечения срока действия для \n*${await conn.getName(who)}* \n\n*В течение:* ${args[0]} Дней\n\n*Обратный отсчет :* ${msToDate(global.db.data.chats[who].expired - now \nУдачи!)}`
     conn.reply(m.chat, teks, m)
 }
-handler.help = ['expired <días>']
+handler.help = ['ПоставитьАренду <Дней>']
 handler.tags = ['owner']
-handler.command = /^(expired|addexpired)$/i
+handler.command = ['поставитьаренду']
 handler.rowner = true
 export default handler
 
