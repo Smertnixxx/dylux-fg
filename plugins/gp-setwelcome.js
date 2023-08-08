@@ -6,9 +6,9 @@ let handler = async (m, { conn, text, isROwner, isOwner }) => {
     m.reply('✅ Se configuro el mensaje de bienvenida')
   } else throw `✳️ Ingrese el mensaje de Bienvenida\n\n@user (mención)\n@group (Nombre de grupo)\n@desc (description de grupo)`
 }
-handler.help = ['setwelcome <text>']
+handler.help = ['Приветствие <Текст>']
 handler.tags = ['owner']
-handler.command = ['setwelcome'] 
+handler.command = ['приветствие'] 
 handler.admin = false
 handler.owner = true
 
