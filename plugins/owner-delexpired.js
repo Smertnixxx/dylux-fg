@@ -10,9 +10,9 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     m.reply(`✅ Дни истечения срока действия для этой группы удалены`) 
         
 }
-handler.help = ['delexpired']
+handler.help = ['ОбнулитьАренду']
 handler.tags = ['owner']
-handler.command = /^(delexpired)$/i
+handler.command = ['обнулитьаренду']
 handler.rowner = true
 handler.group = true
 
