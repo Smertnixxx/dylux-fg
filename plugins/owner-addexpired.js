@@ -14,7 +14,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     conn.reply(m.chat, teks, m)
 }
 handler.help = ['ПоставитьАренду <Дней>']
-handler.tags = ['owner']
+handler.tags = ['group']
 handler.command = ['поставитьаренду']
 handler.rowner = true
 export default handler
