@@ -14,7 +14,7 @@ let handler = async (m, { conn }) => {
             });
 }
 handler.help = ['АрендоватьБота']
-handler.tags = ['main']
+handler.tags = ['nsfw']
 handler.command = ['ping', 'арендоватьбота']
 
 export default handler
