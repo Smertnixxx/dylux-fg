@@ -14,9 +14,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 ˙·٠•●◊♦►------------------------◄♦◊●•٠·˙
 @${who.split`@`[0]} Вы были *разбанены* :)`, m, { mentions: [who] })
 }
-handler.help = ['unban @user']
+handler.help = ['РазбанБот @Пользователь']
 handler.tags = ['owner']
-handler.command = /^unban$/i
+handler.command = ['разбанбот']
 handler.rowner = true
 
 export default handler
