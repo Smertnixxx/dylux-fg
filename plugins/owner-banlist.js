@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 ┗━━━━━━━━━━━━━━━━◊♦►
 
 ${users ? '\n' + users.map(([jid], i) => `
-${i + 1}. ${conn.getName(jid) == undefined ? 'Desconocido' : conn.getName(jid)}
+${i + 1}. ${conn.getName(jid) == undefined ? 'Неизвестный' : conn.getName(jid)}
 ▢ ${jid}
 `.trim()).join('\n') : ''}
 `.trim())
