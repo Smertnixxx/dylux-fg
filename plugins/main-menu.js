@@ -29,7 +29,7 @@ const defaultMenu = {
 `.trimStart(),
   header: '┏━━⊷ *%category* ━━◊♦►',
   body: '║➤ %cmd %isdiamond %isPremium',
-  footer: '┗﹌︎﹌︎﹌︎﹌︎﹌︎﹌︎﹌︎﹌︎﹌︎﹌︎◊♦►\n',
+  footer: '┗﹏︎﹏︎﹏︎﹏︎﹏︎﹏︎﹏︎﹏︎﹏︎◊♦►\n',
   after: `
 `,
 }
