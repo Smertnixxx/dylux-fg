@@ -481,8 +481,8 @@ export async function participantsUpdate({ id, participants, action }) {
                         pp = await this.profilePictureUrl(user, 'image')
                         ppgp = await this.profilePictureUrl(id, 'image')
                         } finally {
-                        text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Добро пожаловать, @user').replace('@group', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'Неизвестный') :
-                            (chat.sBye || this.bye || conn.bye || 'Пока, @user')).replace('@user', '@' + user.split('@')[0])
+                         text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@group'.replace('@subject', await this.getName(id)).replace('@desc',
+                            (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
                          
                             let wel = API('fgmods', '/api/welcome', {
                                 username: await this.getName(user),
