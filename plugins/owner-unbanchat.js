@@ -5,8 +5,8 @@ let handler = async (m, { conn, isOwner, isAdmin, isROwner} ) => {
     global.db.data.chats[m.chat].isBanned = false
     m.reply('✅ Активный бот в этой группе')   
 }
-handler.help = ['unbanchat']
+handler.help = ['РазбанБот']
 handler.tags = ['owner']
-handler.command = ['chaton', 'unbanchat'] 
+handler.command = ['разбанбот', 'unbanchat'] 
 
 export default handler
