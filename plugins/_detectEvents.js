@@ -11,7 +11,7 @@ export async function before(m, { conn, participants }) {
 if (!m.messageStubType || !m.isGroup) return !0
    let groupName = (await conn.groupMetadata(m.chat)).subject
    let groupAdmins = participants.filter(p => p.admin)
-   let pp = await conn.profilePictureUrl(who, 'image').catch(_ => './src/avatar_contact.png')
+   let pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => global.imagen1)
    let img = await (await fetch(pp)).buffer()
    let chat = global.db.data.chats[m.chat]
    const mentionsString = [m.sender, m.messageStubParameters[0], ...groupAdmins.map(v => v.id)]
@@ -23,6 +23,7 @@ if (!m.messageStubType || !m.isGroup) return !0
          txt1 += `*◦  Группа:* ${groupName}\n`
          txt1 += `*◦  Новый администратор:* @${m.messageStubParameters[0].split`@`[0]}\n`
          txt1 += `*◦  Выполненный:* @${m.sender.split`@`[0]}`   
+      await conn.sendMessage(m.chat, { image: img, caption: txt1, mentions: mentionsString }, { quoted: fkontak2 }) 
 }
     
    if (chat.detect2 && m.messageStubType == 30) {
@@ -30,6 +31,7 @@ if (!m.messageStubType || !m.isGroup) return !0
          txt2 += `*◦  Группа:* ${groupName}\n`
          txt2 += `*◦  Он снял с:* @${m.messageStubParameters[0].split`@`[0]}\n`
          txt2 += `*◦  Выполненный:* @${m.sender.split`@`[0]}`
+      await conn.sendMessage(m.chat, { image: img, caption: txt2, mentions: mentionsString }, { quoted: fkontak2 })
 }
 
     if (chat.detect2 && m.messageStubType == 27) {
@@ -41,6 +43,7 @@ if (!m.messageStubType || !m.isGroup) return !0
    } else {
          txt3 += `*◦  Было добавлено:* @${m.messageStubParameters[0].split`@`[0]}\n`
    }
+       await conn.sendMessage(m.chat, { image: img, caption: txt3, mentions: mentionsContentM }, { quoted: fkontak2 })
 }
     
    if (chat.detect2 && m.messageStubType == 28) {
@@ -51,7 +54,8 @@ if (!m.messageStubType || !m.isGroup) return !0
          txt4 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
    } else {
          txt4 += `*◦  Был удален(а):* @${m.messageStubParameters[0].split`@`[0]}\n`   
-   }       
+   }   
+      await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt4, mentions: mentionsContentM }, { quoted: fkontak2 })
 }
        
    if (chat.detect2 && m.messageStubType == 32) {
@@ -69,6 +73,7 @@ if (!m.messageStubType || !m.isGroup) return !0
    } else {
          txt5 += `*◦  Предатель:* @${m.messageStubParameters[0].split`@`[0]}\n`   
    }            
+      await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt5, mentions: mentionsContentM }, { quoted: fkontak2 })
 }    
     
    if (chat.detect2 && m.messageStubType == 26) {
@@ -82,13 +87,15 @@ if (!m.messageStubType || !m.isGroup) return !0
         txt6 += `*◦  Группа:* ${groupName}\n`
         txt6 += `*◦  Группа была:* ${'```' + accion + '```'}\n`
         txt6 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
+      await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt6, mentions: mentionsContentM }, { quoted: fkontak2 })
 }
     
    if (chat.detect2 && m.messageStubType == 21) {
       let txt7 = `*Недавно название группы было изменено.*\n\n`
          txt7 += `*◦  Новое имя:* ${'```' + groupName + '```'}\n`
          txt7 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
-      conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
+      await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt7, mentions: mentionsContentM }, { quoted: fkontak2 })
+ 
 }
 
 } /* Cierre del comando */
