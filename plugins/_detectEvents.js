@@ -65,13 +65,13 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt4, mentions: me
     } else {
     ax = 'удаленный'    
     }
-      let txt5 = `*Недавно он был ${ax} член группы.*\n\n`
+      let txt5 = `*Участник ${ax} вышел из группы.*\n\n`
          txt5 += `*◦  Группа:* ${groupName}\n`
      if (ax === 'удаленный') {       
-         txt5 += `*◦  Был удален(а):* @${m.messageStubParameters[0].split`@`[0]}\n`
+         txt5 += `*◦  Уходи и больше не возвращайся предатель!*\n`
          txt5 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
    } else {
-         txt5 += `*◦  Он вышел:* @${m.messageStubParameters[0].split`@`[0]}\n`   
+         txt5 += `*◦  Предатель:* @${m.messageStubParameters[0].split`@`[0]}\n`   
    }            
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt5, mentions: mentionsContentM }, { quoted: fkontak2 })
 }    
