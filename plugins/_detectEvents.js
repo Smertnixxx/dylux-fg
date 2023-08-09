@@ -38,8 +38,7 @@ await conn.sendMessage(m.chat, { image: img, caption: txt2, mentions: mentionsSt
       let txt3 = `* К группе присоединился новый участник.*\n\n`
          txt3 += `*◦  Группа:* ${groupName}\n`
      if (!m.sender.endsWith('@g.us')) {
-         txt3 += `*◦  Он был добавлен в:* @${m.messageStubParameters[0].split`@`[0]}\n`
-         txt3 += `*◦  Выполненный:* @${m.sender.split`@`[0]}`
+         txt3 += `*◦  Добро Пожаловать в группу @user*`
    } else {
          txt3 += `*◦  Было добавлено:* @${m.messageStubParameters[0].split`@`[0]}\n`
    }
