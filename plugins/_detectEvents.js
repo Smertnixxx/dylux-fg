@@ -71,7 +71,7 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt4, mentions: me
          txt5 += `*◦  Был удален(а):* @${m.messageStubParameters[0].split`@`[0]}\n`
          txt5 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
    } else {
-         txt5 += `*◦  Se salió:* @${m.messageStubParameters[0].split`@`[0]}\n`   
+         txt5 += `*◦  Он вышел:* @${m.messageStubParameters[0].split`@`[0]}\n`   
    }            
 await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt5, mentions: mentionsContentM }, { quoted: fkontak2 })
 }    
