@@ -34,11 +34,12 @@ await conn.sendMessage(m.chat, { image: img, caption: txt1, mentions: mentionsSt
 await conn.sendMessage(m.chat, { image: img, caption: txt2, mentions: mentionsString }, { quoted: fkontak2 })
 }
 
-   if (chat.detect2 && m.messageStubType == 27) {
-      let txt3 = `* К группе присоединился новый участник.*\n\n`
-         txt3 += `*◦  Группа:* ${groupName}\n`
+    if (chat.detect2 && m.messageStubType == 27) {
+      let txt3 = `*К группе присоединился новый участник.*\n\n`
+         txt3 += `*◦  Представьтесь новичок Имя, Фото, Голосовое сообщение, Город *\n`
      if (!m.sender.endsWith('@g.us')) {
-         txt3 += `*◦  Добро Пожаловать в группу @user*`
+         txt3 += `*◦  Новый участник:* @${m.messageStubParameters[0].split`@`[0]}\n`
+         txt3 += `*◦  Одобрил(а) заявку на вступление:* @${m.sender.split`@`[0]}`
    } else {
          txt3 += `*◦  Было добавлено:* @${m.messageStubParameters[0].split`@`[0]}\n`
    }
