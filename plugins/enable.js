@@ -352,6 +352,6 @@ throw false
 conn.sendMessage(m.chat, { text: `🗂️ Выбор: ${type}\n🎚️ Состояние: ${isEnable ? 'АКТИВИРОВАННЫЙ' : 'ДЕЗАКТИВИРОВАННЫЙ'}\n📣 Для: ${isAll ? 'ЭТОТ БОТ' : isUser ? '' : 'Этот чат'}` }, { quoted: m })        
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
-handler.tags = ['group', 'owner']
+handler.tags = ['owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?[01])$/i
 export default handler
