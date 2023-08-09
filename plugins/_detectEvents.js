@@ -88,6 +88,7 @@ if (!m.messageStubType || !m.isGroup) return !0
       let txt7 = `*Недавно название группы было изменено.*\n\n`
          txt7 += `*◦  Новое имя:* ${'```' + groupName + '```'}\n`
          txt7 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
+      conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
 }
 
 } /* Cierre del comando */
