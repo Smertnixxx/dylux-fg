@@ -61,7 +61,6 @@ await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt4, mentions: me
    if (chat.detect2 && m.messageStubType == 32) {
       let ax 
     if (m.messageStubParameters[0] === m.sender) {
-    ax = 'выступающий'    
     } else {
     ax = 'удаленный'    
     }
