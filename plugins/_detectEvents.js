@@ -11,7 +11,7 @@ export async function before(m, { conn, participants }) {
 if (!m.messageStubType || !m.isGroup) return !0
    let groupName = (await conn.groupMetadata(m.chat)).subject
    let groupAdmins = participants.filter(p => p.admin)
-   let pp = await conn.profilePictureUrl(m.chat, 'image').catch(_ => global.imagen1)
+   let pp = await conn.profilePictureUrl(who, 'image').catch(_ => './src/avatar_contact.png')
    let img = await (await fetch(pp)).buffer()
    let chat = global.db.data.chats[m.chat]
    const mentionsString = [m.sender, m.messageStubParameters[0], ...groupAdmins.map(v => v.id)]
