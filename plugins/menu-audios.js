@@ -83,7 +83,6 @@ conn.sendMessage(m.chat, { image: pp, caption: str.trim(), mentions: [...str.mat
 } catch {
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] В меню есть ошибка, и отправить ее не удалось, сообщите об этом при запуске бота*', m)
 }}
-handler.tags = ['fun']
 handler.command = /^(menu2|audios|меню2|memu2|menuaudio|menuaudios|memuaudios|memuaudio|audios|keyaudio|keyaudios)$/i
 handler.exp = 50
 handler.fail = null
