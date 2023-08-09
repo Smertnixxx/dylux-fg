@@ -19,7 +19,7 @@ if (!m.messageStubType || !m.isGroup) return !0
    let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }  
    
    if (chat.detect2 && m.messageStubType == 29) {
-      let txt1 = `*Недавно один участник был повышен до администратора.*\n\n`
+      let txt1 = `*Участник был повышен до Администратора.*\n\n`
          txt1 += `*◦  Группа:* ${groupName}\n`
          txt1 += `*◦  Новый администратор:* @${m.messageStubParameters[0].split`@`[0]}\n`
          txt1 += `*◦  Выполненный:* @${m.sender.split`@`[0]}`   
@@ -27,10 +27,10 @@ if (!m.messageStubType || !m.isGroup) return !0
 }
     
    if (chat.detect2 && m.messageStubType == 30) {
-      let txt2 = `*Недавно администратор был понижен в должности до участника.*\n\n`
+      let txt2 = `*Администратор был понижен в должности до участника.*\n\n`
          txt2 += `*◦  Группа:* ${groupName}\n`
-         txt2 += `*◦  Он снял с:* @${m.messageStubParameters[0].split`@`[0]}\n`
-         txt2 += `*◦  Выполненный:* @${m.sender.split`@`[0]}`
+         txt2 += `*◦  Снятый админ:* @${m.messageStubParameters[0].split`@`[0]}\n`
+         txt2 += `*◦  Понизил:* @${m.sender.split`@`[0]}`
       await conn.sendMessage(m.chat, { image: img, caption: txt2, mentions: mentionsString }, { quoted: fkontak2 })
 }
 
@@ -47,11 +47,11 @@ if (!m.messageStubType || !m.isGroup) return !0
 }
     
    if (chat.detect2 && m.messageStubType == 28) {
-      let txt4 = `*Недавно один из участников группы был удален.*\n\n`
+      let txt4 = `*Участник был удален из группы.*\n\n`
          txt4 += `*◦  Группа:* ${groupName}\n` 
      if (!m.sender.endsWith('@g.us')) {        
          txt4 += `*◦  Был удален(а):* @${m.messageStubParameters[0].split`@`[0]}\n`
-         txt4 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
+         txt4 += `*◦  Удалил:* @${m.sender.split`@`[0]}`
    } else {
          txt4 += `*◦  Был удален(а):* @${m.messageStubParameters[0].split`@`[0]}\n`   
    }   
@@ -79,21 +79,21 @@ if (!m.messageStubType || !m.isGroup) return !0
    if (chat.detect2 && m.messageStubType == 26) {
       let accion  
     if (m.messageStubParameters[0].split`@`[0] === 'on') {
-      accion = 'закрытый'    
+      accion = 'закрыта'    
       } else {
-      accion = 'открытый'   
+      accion = 'открыта'   
       }
-      let txt6 = `*Недавно были изменены настройки группы.*\n\n`
+      let txt6 = `*Были изменены настройки группы.*\n\n`
         txt6 += `*◦  Группа:* ${groupName}\n`
         txt6 += `*◦  Группа была:* ${'```' + accion + '```'}\n`
-        txt6 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
+        txt6 += `*◦  Изменил:* @${m.sender.split`@`[0]}`
       await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt6, mentions: mentionsContentM }, { quoted: fkontak2 })
 }
     
    if (chat.detect2 && m.messageStubType == 21) {
-      let txt7 = `*Недавно название группы было изменено.*\n\n`
+      let txt7 = `*Название группы было изменено.*\n\n`
          txt7 += `*◦  Новое имя:* ${'```' + groupName + '```'}\n`
-         txt7 += `*◦  Выполненый:* @${m.sender.split`@`[0]}`
+         txt7 += `*◦  Изменил:* @${m.sender.split`@`[0]}`
       await conn.sendMessage(m.chat, { image: { url: pp }, caption: txt7, mentions: mentionsContentM }, { quoted: fkontak2 })
  
 }
