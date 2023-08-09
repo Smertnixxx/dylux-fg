@@ -35,7 +35,7 @@ await conn.sendMessage(m.chat, { image: img, caption: txt2, mentions: mentionsSt
 }
 
    if (chat.detect2 && m.messageStubType == 27) {
-      let txt3 = `*Недавно к группе присоединился новый участник.*\n\n`
+      let txt3 = `* К группе присоединился новый участник.*\n\n`
          txt3 += `*◦  Группа:* ${groupName}\n`
      if (!m.sender.endsWith('@g.us')) {
          txt3 += `*◦  Он был добавлен в:* @${m.messageStubParameters[0].split`@`[0]}\n`
