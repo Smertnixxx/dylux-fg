@@ -41,7 +41,7 @@ global.timestamp = {
 
 const __dirname = global.__dirname(import.meta.url)
 
-global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+global.opts = yargs(process.argv.slice(2)).exitProcess(false).parse()
 global.prefix = new RegExp('^[' + (opts['prefix'] || '‎z/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.,\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']')
 
 // global.opts['db'] = process.env['db']
@@ -82,7 +82,7 @@ loadDatabase()
 //-- SESSION
 global.authFolder = `sessions`
 const { state, saveCreds } = await useMultiFileAuthState(global.authFolder)
-let { version, isLatest } = await fetchLatestBaileysVersion() 
+const { version, isLatest } = await fetchLatestBaileysVersion()
 /*const connectionOptions = {
   printQRInTerminal: true,
   auth: state,
