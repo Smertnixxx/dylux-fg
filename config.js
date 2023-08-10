@@ -21,12 +21,12 @@ global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
   'https://api.xteam.xyz': 'd90a9e986e18778b',
   'https://zenzapis.xyz': '675e34de8a', 
-  'https://api-fgmods.ddns.net': 'fg-dylux'
+  'https://api-fgmods.ddns.net': 'TU-APIKEY' //Regístrese en https://api-fgmods.ddns.net/
 }
 
 // Sticker WM
-global.packname = 'ULTIMATE┃ᴮᴼᵀ' 
-global.author = '@smertnix' 
+global.packname = 'DyLux┃ᴮᴼᵀ' 
+global.author = '@fg98' 
 global.fgig = '▢ Sígueme en Instagram\nhttps://www.instagram.com/fg98_ff\n' 
 global.dygp = 'https://chat.whatsapp.com/IO9jmpI72ejHiN4unRZleU'
 global.fgsc = 'https://github.com/FG98F/dylux-fg' 
