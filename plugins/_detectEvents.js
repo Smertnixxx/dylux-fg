@@ -19,10 +19,10 @@ if (!m.messageStubType || !m.isGroup) return !0
    let fkontak2 = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }  
    
    if (chat.detect2 && m.messageStubType == 29) {
-      let txt1 = `*Recientemente se ha promovido un miembro a administrador.*\n\n`
-         txt1 += `*◦  Grupo:* ${groupName}\n`
-         txt1 += `*◦  Nuevo admin:* @${m.messageStubParameters[0].split`@`[0]}\n`
-         txt1 += `*◦  Ejecutado por:* @${m.sender.split`@`[0]}`
+      let txt1 = `*Участник был повышен до администратора.*\n\n`
+         txt1 += `*◦  Группа:* ${groupName}\n`
+         txt1 += `*◦  Новый админ:* @${m.messageStubParameters[0].split`@`[0]}\n`
+         txt1 += `*◦  Повысил:* @${m.sender.split`@`[0]}`
 await conn.sendMessage(m.chat, { image: img, caption: txt1, mentions: mentionsString }, { quoted: fkontak2 })     
 }
     
